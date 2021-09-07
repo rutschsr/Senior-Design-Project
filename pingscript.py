@@ -13,7 +13,8 @@ def ping_ip(current_ip_address):
                 return False
  
 if __name__ == '__main__':
+    
         if ping_ip('10.10.10.1'):
-            print(f"{each} is available")
+            print(f"{ping_ip} is available")
         else:
-            print(f"{each} is not available")
+            print(f"{ping_ip} is not available")
