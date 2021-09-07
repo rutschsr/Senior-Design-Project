@@ -1,11 +1,16 @@
 import subprocess
 import platform
  
-def ping_ip(current_ip_address):
+IP = '10.10.10.1'
+n=500
+
+
+
+def ping_ip(current_ip_address
         try:
-            output = subprocess.check_output("ping -{} 1 {}".format('n' if platform.system().lower(
-            ) == "windows" else 'c', current_ip_address ), shell=True, universal_newlines=True)
-            if 'unreachable' in output:
+            output = subproces
+            ) == "windows" els
+            if 'unreachable' i
                 return False
             else:
                 return True
@@ -13,8 +18,12 @@ def ping_ip(current_ip_address):
                 return False
  
 if __name__ == '__main__':
-    
-        if ping_ip('10.10.10.1'):
-            print(f"{ping_ip} is available")
+    for z in range(n):
+        if ping_ip(IP):
+            print(f"{IP} is av
         else:
-            print(f"{ping_ip} is not available")
+            print(f"{IP} is no
+            
+print(f"Succesfully Pinged {IP
+#for z in range(n):
+   #bz = ping_ip('10.10.10.1')

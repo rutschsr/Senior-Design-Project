@@ -1,0 +1,12 @@
+Raspberry Pi and Router setup / login info:
+
+Edgerouter:
+	IP Address 10.10.10.1
+	Username: Miami
+	Password: redhawk
+
+Raspberry Pi:
+	IP Address: 10.10.10.3
+	Username: Pi
+	Password: raspberry
+	Accessable through SSH and VNC
