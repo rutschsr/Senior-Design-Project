@@ -14,6 +14,7 @@ On windows these can be installed using the Anaconda package manager and the fol
 (Anaconda must be installed first: anaconda.org)
 
 Run the following commands in the anaconda command window:
+
     SQLITE3:
     conda install -c blaze sqlite3
 
