@@ -15,9 +15,11 @@ On windows these can be installed using the Anaconda package manager and the fol
 
 Run the following commands in the anaconda command window:
 
-    SQLITE3:
-    conda install -c blaze sqlite3
+   SQLITE3:
+     
+     conda install -c blaze sqlite3
 
-    PYSERIAL:
+   PYSERIAL:
+    
     conda install -c anaconda pyserial
 
