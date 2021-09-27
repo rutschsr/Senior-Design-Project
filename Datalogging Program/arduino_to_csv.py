@@ -4,7 +4,7 @@ from sqlite3 import Error
 from datetime import datetime
 
 #System Variables
-arduino_port = "COM4" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
+arduino_port = "COM5" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
 baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
@@ -12,29 +12,25 @@ i=1
 
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest1.sqlite')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest4.sqlite')
 cur = con.cursor()
 
 try:
     cur.execute('''CREATE TABLE current
-               (date text, current text)''')
+               (date text, current real)''')
 except Error as e:
     print(e)
 
 
 con.commit
 #create_connection(r"C:\Users\NBSwi\Documents\GitHub\RaceTime\Sqlite\datatest1.db")
-try:
-    ser = serial.Serial(arduino_port, baud)
-except Error as e:
-    print(e)
-    
+ser = serial.Serial(arduino_port, baud)
 
-if not serial.SerialException():
 
-    print('Press "a" to start recording data')
-    textin=input()
-    if textin =='a':
+
+print('Press "a" to start recording data')
+textin=input()
+if textin =='a':
         print
         starttime=datetime.now()
         print('Data started recording at: ', str(starttime))
@@ -42,9 +38,17 @@ if not serial.SerialException():
             #read data
           Data=str(ser.readline())
           currenttime=datetime.now()
+          Data=Data.replace("b'", "" )
+          Data=Data.replace("\'","")
+          Data=Data.replace("\'","")
+          Data=Data.replace("\\","")
+          Data=Data.replace("rn","")
 
             #write data to file database:
-          cur.execute("INSERT INTO current (currentime,data)")
+          print('DateTime: ',str(currenttime),'Serial: ', Data )
+          DataValue = "INSERT INTO current VALUES ('" + str(currenttime) +"', '"+ Data +"')"
+
+          cur.execute(DataValue)
           con.commit()
         con.close()
 
@@ -55,13 +59,12 @@ if not serial.SerialException():
 
 
 
-
 #file = open(fileName, "a")
 
 #display the data to the terminal
-getData=str(ser.readline())
-data=getData[0:][:-2]
-print(data)
+# getData=str(ser.readline())
+# data=getData[0:][:-2]
+# print(data)
 
 #add the data to the file
 #file = open(fileName, "a") #append the data to the file
@@ -69,3 +72,4 @@ print(data)
 
 #close out the file
 #file.close()
+#add line

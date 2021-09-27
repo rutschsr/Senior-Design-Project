@@ -25,5 +25,5 @@ void loop(void)
   Serial.print(current_mA);
   Serial.println("");
 
-  delay(2000);
+  delay(100);
 }
