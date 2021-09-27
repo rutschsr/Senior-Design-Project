@@ -3,6 +3,8 @@
 
 Adafruit_INA219 ina219;
 
+//I2c sensor connected to SCA and SCL pins
+//Example program largely from adafruit
 
 void setup(void) 
 {
