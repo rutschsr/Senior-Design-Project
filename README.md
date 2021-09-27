@@ -6,3 +6,6 @@ ECE 448 Final Design Project
 Sam Rutschilling, Owen Hardy, and Jordan Smith
 
 Power Measurement of Computing System
+
+
+

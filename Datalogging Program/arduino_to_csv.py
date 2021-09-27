@@ -11,7 +11,7 @@ dbName="data.db"
 i=1
 
 
-#create sqlite database
+#create sqlite database (raw file location from my test machine)
 con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest1.sqlite')
 cur = con.cursor()
 
