@@ -4,7 +4,7 @@ from sqlite3 import Error
 from datetime import datetime
 
 #System Variables
-arduino_port = "COM5" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
+arduino_port = "COM6" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
 baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
@@ -12,12 +12,17 @@ i=1
 
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest4.sqlite')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest5.sqlite3')
 cur = con.cursor()
 
-try:
-    cur.execute('''CREATE TABLE current
-               (date text, current real)''')
+#SQL query to be used: SELECT date,current FROM current WHERE date>= '2021-09-27 17:24:00'
+
+# cur.execute('''CREATE TABLE current
+#                (date text, current real)''')
+
+try: #Add another column here for voltage: , voltage real
+    cur.execute('''CREATE TABLE PowerMeasurement
+               (date text, wattage real)''')
 except Error as e:
     print(e)
 
@@ -31,11 +36,10 @@ ser = serial.Serial(arduino_port, baud)
 print('Press "a" to start recording data')
 textin=input()
 if textin =='a':
-        print
         starttime=datetime.now()
         print('Data started recording at: ', str(starttime))
         while i==1:
-            #read data
+            #read data: add functionality here to parse string for voltage
           Data=str(ser.readline())
           currenttime=datetime.now()
           Data=Data.replace("b'", "" )
@@ -59,17 +63,3 @@ if textin =='a':
 
 
 
-#file = open(fileName, "a")
-
-#display the data to the terminal
-# getData=str(ser.readline())
-# data=getData[0:][:-2]
-# print(data)
-
-#add the data to the file
-#file = open(fileName, "a") #append the data to the file
-#file.write(data + "\\n") #write data with a newline
-
-#close out the file
-#file.close()
-#add line

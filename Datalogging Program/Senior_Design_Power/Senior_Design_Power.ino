@@ -21,8 +21,9 @@ void loop(void)
   float power_mW = 0;
 
   power_mW = ina219.getPower_mW();
+  float power_W=power_mW/1000;
 
-  Serial.print(power_mW);
+  Serial.print(power_W);
   Serial.println("");
 
   delay(100);
