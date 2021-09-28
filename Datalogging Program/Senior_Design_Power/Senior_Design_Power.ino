@@ -18,11 +18,11 @@ void setup(void)
 
 void loop(void) 
 {
-  float current_mA = 0;
+  float power_mW = 0;
 
-  current_mA = ina219.getCurrent_mA();
-  // Has the ability to find power, maybe use that
-  Serial.print(current_mA);
+  power_mW = ina219.getPower_mW();
+
+  Serial.print(power_mW);
   Serial.println("");
 
   delay(100);
