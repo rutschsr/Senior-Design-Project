@@ -4,7 +4,7 @@ from sqlite3 import Error
 from datetime import datetime
 
 #System Variables
-arduino_port = "COM6" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
+arduino_port = "COM5" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
 baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
@@ -12,7 +12,7 @@ i=1
 
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\datatest5.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\500test100Power1.sqlite3')
 cur = con.cursor()
 
 #SQL query to be used: SELECT date,current FROM current WHERE date>= '2021-09-27 17:24:00'
@@ -50,7 +50,7 @@ if textin =='a':
 
             #write data to file database:
           print('DateTime: ',str(currenttime),'Serial: ', Data )
-          DataValue = "INSERT INTO current VALUES ('" + str(currenttime) +"', '"+ Data +"')"
+          DataValue = "INSERT INTO PowerMeasurement VALUES ('" + str(currenttime) +"', '"+ Data +"')"
 
           cur.execute(DataValue)
           con.commit()
