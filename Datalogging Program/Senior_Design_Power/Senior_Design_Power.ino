@@ -31,8 +31,9 @@ void loop(void)
   shuntvoltage_mV=ina219.getShuntVoltage_mV();
   float power_W=power_mW/1000;
   loadvoltage=voltage_V+(shuntvoltage_mV/1000);
-  power_W=(current_mA/1000)*5.14; //(measured voltage)
+  power_W=(current_mA/1000)*loadvoltage; //(measured voltage)
   Serial.print(power_W);
+  
   Serial.println("");
 
   delay(100);
