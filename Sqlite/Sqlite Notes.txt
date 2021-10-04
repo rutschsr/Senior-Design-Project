@@ -1,0 +1,7 @@
+For 500testPowerPrint1
+total time: 9.14957 sec (with sleep statement)
+
+It takes 0.018 sec to run a single ping
+
+500testPowerCount1
+Executed in 0.001071 (no sleep statement)
