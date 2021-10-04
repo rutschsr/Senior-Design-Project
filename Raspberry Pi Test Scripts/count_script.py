@@ -1,6 +1,6 @@
 from datetime import datetime
 
-n = 500
+n = 10000
 
 starttime = datetime.now()
 i = 0
