@@ -11,4 +11,4 @@ while i < n:
 finishtime = datetime.now()
 print('Start time: ', str(starttime))
 print('End time: ', str(finishtime))
-print('Total time: ', str(starttime - finishtime))
+print('Total time: ', str(finishtime - starttime))
