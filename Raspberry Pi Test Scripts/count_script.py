@@ -1,7 +1,7 @@
 from datetime import datetime
 import time
 
-n = 500
+n = 10000
 
 starttime = datetime.now()
 i = 0
