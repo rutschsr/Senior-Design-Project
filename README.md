@@ -61,7 +61,7 @@ Testbench setup:
 - Program accessed via visual studio code remote SSH from windows virtual machine isolated from network.
 - Desktop access is also availible to the raspberry pi through VNC viewer
 
-
+<iframe frameborder="0" style="width:100%;height:413px;" src="https://viewer.diagrams.net/?tags=%7B%7D&highlight=000000&edit=_blank&layers=1&nav=1&title=Hardware%20setup.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Frutschsr%2FSenior-Design-Project%2Fmain%2FDiagrams%2FHardware%2520setup.drawio%3Ftoken%3DAEX7A2QRGDFWJBJV5ZTEUILBLYKS2"></iframe>
 
 Test method for determining the required resolution:
 1. Connected the meter in between the Raspberry pi and 5V power supply
