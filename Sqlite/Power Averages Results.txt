@@ -2,22 +2,33 @@ The dates I used to pull all of these was a section of the full length of wattag
 longer than the previously decided 5.4 seconds for the pings. The queries I used are available to be altered if
 this doesn't seem right
 
+For wattage: 5.4sec/500pings
+
 500test100Power
 Pings: avg = 2.8106W
 Nonpings: 2.3890W
+Power bump: 0.4216W ~> Wattage = 0.00455328
 
 500test100Power1
 Pings: avg = 2.8669W
 Nonpings: avg = 2.4465W
+Power bump: 0.4204W ~> Wattage = 0.00454032
 
 500test100Power2
 Pings: avg = 2.8668W
 Nonpings: avg = 2.4578W
+Power bump: 0.409W ~> Wattage = 0.0044172
+
+For wattage: 0.00107sec
 
 500test100PowerCount1
 Counts: avg = 2.73W
 Noncounts: avg = 2.4635W
+Power bump: 0.2665W ~> Wattage = 0.0028515
+
+For wattage: 9.14957sec/500iterations
 
 500test100PowerPrint1
 Counts: avg = 2.67W
 Noncounts: avg = 2.4603W
+Power bump: 0.2097W ~> Wattage = 0.0038373
