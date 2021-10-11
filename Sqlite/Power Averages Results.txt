@@ -19,12 +19,12 @@ Pings: avg = 2.8668W
 Nonpings: avg = 2.4578W
 Power bump: 0.409W ~> Wattage = 0.0044172
 
-For wattage: 0.00107sec
+For wattage: 0.00107sec/500iterations
 
 500test100PowerCount1
 Counts: avg = 2.73W
 Noncounts: avg = 2.4635W
-Power bump: 0.2665W ~> Wattage = 0.0028515
+Power bump: 0.2665W ~> Wattage = 5.7031E-7
 
 For wattage: 9.14957sec/500iterations
 
