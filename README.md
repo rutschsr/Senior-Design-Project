@@ -23,6 +23,9 @@ https://code.visualstudio.com/docs/remote/ssh
 
 https://code.visualstudio.com/
 
+Notes for VSCode and Arduino:
+- Must open arduino .ino file from folders in arduino otherwise it will not find the .json configuration file and will not work correctly
+
 https://www.raspberrypi.org/software/operating-systems/
 
 https://learn.adafruit.com/adafruit-ina219-current-sensor-breakout/arduino-code
