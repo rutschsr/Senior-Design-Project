@@ -13,6 +13,12 @@ https://sqlitebrowser.org/
 
 https://www.anaconda.com/products/individual#Downloads
 
+Annaconda Notes:
+- Anaconda does not activate correctly on windows unless you open vscode through Anaconda Command Prompt
+- Use the command `code .` to start VSCode from Anaconda
+- Browse through the folders from there in order to find the github local file location
+- This should stop from getting errors related to "dll not found" when importing packages that are actually installed through Anaconda.
+
 https://code.visualstudio.com/docs/remote/ssh
 
 https://code.visualstudio.com/
