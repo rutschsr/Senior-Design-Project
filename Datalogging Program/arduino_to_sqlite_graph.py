@@ -19,10 +19,10 @@ i=1
 # Create empty variable for graphing
 PowerGraph=collections.deque(np.zeros(100))
 
-fig=plt.figure(figsize=(12,6))
-ax=plt.subplot(121)
-plt.show()
 
+with plt.ion():
+  fig=plt.figure(figsize=(12,6))
+  #ax=plt.subplot(121)
 
 #create sqlite database (raw file location from my test machine)
 con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\500test100PowerCount1.sqlite3')
@@ -65,7 +65,8 @@ if textin =='a':
           print('DateTime: ',str(currenttime),'Serial: ', Data )
           DataValue = "INSERT INTO PowerMeasurement VALUES ('" + str(currenttime) +"', '"+ Data +"')"
           #Graphing Function:
-          ax.plot(Data)
+          fig.plot(Data)
+          plt.ion()
 
           cur.execute(DataValue)
           con.commit()

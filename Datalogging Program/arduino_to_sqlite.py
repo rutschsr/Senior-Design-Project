@@ -12,7 +12,7 @@ i=1
 
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\500test100PowerCount1.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\500test100PowerCount11.sqlite3')
 cur = con.cursor()
 
 #SQL query to be used: SELECT date,current FROM current WHERE date>= '2021-09-27 17:24:00'
