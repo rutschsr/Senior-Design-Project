@@ -23,6 +23,8 @@ https://code.visualstudio.com/docs/remote/ssh
 
 https://code.visualstudio.com/
 
+https://raspberrytips.com/mail-server-raspberry-pi/ (local mail server)
+
 Notes for VSCode and Arduino:
 - Must open arduino .ino file from folders in arduino otherwise it will not find the .json configuration file and will not work correctly
 
