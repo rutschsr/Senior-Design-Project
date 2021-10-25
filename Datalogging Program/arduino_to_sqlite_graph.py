@@ -10,7 +10,7 @@ import psutil
 import collections
 
 #System Variables
-arduino_port = "COM7" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
+arduino_port = "COM5" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
 baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
@@ -25,7 +25,7 @@ with plt.ion():
   #ax=plt.subplot(121)
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\500test100PowerCount1.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\ESPTEST.sqlite3')
 cur = con.cursor()
 
 #SQL query to be used: SELECT date,current FROM current WHERE date>= '2021-09-27 17:24:00'
