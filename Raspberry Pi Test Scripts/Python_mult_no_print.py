@@ -1,4 +1,4 @@
 # Infinite multiplying loop
 i = 1
-while True:
+while i < 2000:
 	i = i * 2
