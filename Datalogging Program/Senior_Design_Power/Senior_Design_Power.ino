@@ -36,5 +36,5 @@ void loop(void)
   
   Serial.println(current_mA/1000);
  Serial.print("");
-  delay(100);
+  delay(1000);
 }

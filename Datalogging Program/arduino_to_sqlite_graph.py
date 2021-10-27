@@ -2,33 +2,23 @@ import serial #From pyserial package https://anaconda.org/anaconda/pyserial
 import sqlite3 #From sqlite3 package https://anaconda.org/anaconda/sqlite3
 from sqlite3 import Error
 from datetime import datetime
-#Plot Help: https://towardsdatascience.com/plotting-live-data-with-matplotlib-d871fac7500b
-import matplotlib.pyplot as plt #package installed as part of Anaconda
 import numpy as np
-from matplotlib.animation import FuncAnimation
-import psutil
+import matplotlib.pyplot as plt
 import collections
+from drawnow import drawnow, figure
 
 #System Variables
-arduino_port = "COM5" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
-baud = 115200 #Needs to be the same as the arudino otherwise it will not work
-fileName="current-data.csv" #name of the CSV file generated
-dbName="data.db"
+arduino_port = "COM5" #serial port of Arduino on local machine
+baud = 115200 #Needs to match arduino
 i=1
-
-# Create empty variable for graphing
-PowerGraph=collections.deque(np.zeros(100))
-
-
-with plt.ion():
-  fig=plt.figure(figsize=(12,6))
-  #ax=plt.subplot(121)
+firstround=1
+graphdata1=collections.deque(np.zeros(10))
+timedata=collections.deque(np.zeros(10))
 
 #create sqlite database (raw file location from my test machine)
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\ESPTEST.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\graphtesting.sqlite3')
 cur = con.cursor()
 
-#SQL query to be used: SELECT date,current FROM current WHERE date>= '2021-09-27 17:24:00'
 
 # cur.execute('''CREATE TABLE current
 #                (date text, current real)''')
@@ -44,6 +34,11 @@ con.commit
 #create_connection(r"C:\Users\NBSwi\Documents\GitHub\RaceTime\Sqlite\datatest1.db")
 ser = serial.Serial(arduino_port, baud)
 
+#plt.autoscale()
+#plt.ion()
+#plt.show(block=False)
+def plotgraph(time,data):
+  plt.plot(currenttime.timestamp(),graphdata)
 
 
 print('Press "a" to start recording data')
@@ -64,9 +59,26 @@ if textin =='a':
             #write data to file database:
           print('DateTime: ',str(currenttime),'Serial: ', Data )
           DataValue = "INSERT INTO PowerMeasurement VALUES ('" + str(currenttime) +"', '"+ Data +"')"
-          #Graphing Function:
-          fig.plot(Data)
-          plt.ion()
+          try:
+
+            graphdata=float(Data)
+            
+            
+          except ValueError as e:
+            print(e)
+            graphdata=0
+           
+          timedata.append(currenttime.timestamp())
+          graphdata1.append(graphdata)
+          drawnow(plotgraph(currenttime.timestamp(),graphdata))
+          #plt.gca().relim
+          #plt.gca().autoscale_view()
+          #plt.show(block=False)
+          
+          # if firstround==1:
+          #   plt.show(block=False)
+          #   firstround=0
+        
 
           cur.execute(DataValue)
           con.commit()
