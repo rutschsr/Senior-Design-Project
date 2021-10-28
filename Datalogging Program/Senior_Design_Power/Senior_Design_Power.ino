@@ -34,7 +34,7 @@ void loop(void)
   power_W=(current_mA/1000)*loadvoltage; //(measured voltage)
   //Serial.print(power_W);
   
-  Serial.println(current_mA/1000);
+  Serial.println(power_W);
  Serial.print("");
-  delay(1000);
+  delay(10);
 }

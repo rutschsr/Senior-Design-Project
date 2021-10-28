@@ -1,0 +1,26 @@
+CFile Write Test:CFileWriteTEst1.sqlite3
+	100ms sample rate, creating 100000000 lines of r in file, 190MB file
+	
+Python file write test
+	100ms sample rate, creating 1000000 lines of r in file
+	
+
+2021/10/28
+Revisiting Ping tests, with 10ms sample rate
+
+Using Pingscript.py
+
+Printing confirmation every time.
+10ms500pingPrintout, Script took 9.22910 seconds to complete
+
+Without printing confromation
+10ms500pingNoPrintout
+
+Revisiting write tests with 10ms sample rate:
+CFileWriteTest10ms1
+same program as above, 100000000 lines of r in file, 190 MB file
+Seemed to not run at once, could not tell what was causing the test pi issues
+
+Python Write test
+Same Program as above:
+creating output file with 1000000 of r in document, 2.9 MB file size
