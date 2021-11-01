@@ -10,15 +10,31 @@
 **[Conclusion](#conclusion)**<br>
 
 # Abstract
+The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  
+
+Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations.
+
 # Project Background & Research
+
 # Solution Implementation
+<p align="center">
+  <img height="600" src="/Diagrams/Hardware%20setup.drawio.png">
+</p>
+
 (not the what, more the data)
 # Data Findings & Interpretation
+* Python Addition/Subtraction/Multiply/Divide print
+* Python Addition/Subtraction/Multiply/Divide no print
+* Python Write to file
+* Objective-C Write to file
+* Python LAN ping print
+* Python LAN ping no print
+
 # Future Project Goals
 # Conclusion
 
 
-# Our notes
+# Our notes (to be ommitted or relocated)
 Be sure to discuss:
 * ABET: What decisions and why, ethical impact
 
