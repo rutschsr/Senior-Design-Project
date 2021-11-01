@@ -23,7 +23,7 @@ Before work on the project began, we changed the overall scope of the project to
 # Conclusion
 
 
-# Our notes
+# Our notes (to be ommitted or relocated)
 Be sure to discuss:
 * ABET: What decisions and why, ethical impact
 
