@@ -1,11 +1,27 @@
-# Senior-Design-Project
-ECE 448 Final Design Project
+# Miami University ECE 448/9 Senior Design Project
+## Power Measurement of a Computing System (Fall 2021/Spring 2022)
+## By: Owen Hardy ('22), Sam Rutschilling ('22), Jordan Smith ('22)
+
+## Table of Contents
+**[Abstract](#abstract)**<br>
+**[Information](#information)**<br>
+**[Project Background & Research](#project-background--research)**<br>
+**[Methodologies & Setup](#methodologies--setup)**<br>
+**[Future Project Goals](#future-project-goals)**<br>
+**[Conclusion](#conclusion)**<br>
+
+# Abstract
+# Information
+# Project Background & Research
+# Methodologies & Setup 
+(not the what, more the data)
+# Future Project Goals
+# Conclusion
 
 
-2021-2022 Senior Design Project 
-Sam Rutschilling, Owen Hardy, and Jordan Smith
-
-Power Measurement of Computing System
+# Our notes
+Be sure to discuss:
+* ABET: What decisions and why, ethical impact
 
 Software Utilities used:
 
