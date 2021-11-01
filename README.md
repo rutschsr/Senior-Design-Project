@@ -10,7 +10,12 @@
 **[Conclusion](#conclusion)**<br>
 
 # Abstract
+The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  
+
+Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations.
+
 # Project Background & Research
+
 # Solution Implementation
 (not the what, more the data)
 # Data Findings & Interpretation
