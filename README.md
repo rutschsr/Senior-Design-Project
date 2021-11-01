@@ -23,6 +23,13 @@ Before work on the project began, we changed the overall scope of the project to
 
 (not the what, more the data)
 # Data Findings & Interpretation
+* Python Addition/Subtraction/Multiply/Divide print
+* Python Addition/Subtraction/Multiply/Divide no print
+* Python Write to file
+* Objective-C Write to file
+* Python LAN ping print
+* Python LAN ping no print
+
 # Future Project Goals
 # Conclusion
 
