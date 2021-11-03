@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='CFileWriteTest1.sqlite3'; %Set File name here
+filename='PythonSubtractPrint.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
