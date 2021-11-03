@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='10ms500pingNoPrintout.sqlite3'; %Set File name here
+filename='CFileWriteTest1.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
