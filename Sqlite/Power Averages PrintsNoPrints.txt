@@ -1,0 +1,41 @@
+10ms500pingNoPrintOut
+Ping: 2.981	No Ping: 2.781	Diff: 0.2
+
+10ms500PingPrintout
+Ping:	No Ping:	Diff:
+
+CFileWriteTest1
+Ping:	No Ping:	Diff:
+
+CFileWriteTest10ms1
+Ping:	No Ping:	Diff:
+
+PythonAddNoPrint
+Ping:	No Ping:	Diff:
+
+PythonAddPrint
+Ping:	No Ping:	Diff:
+
+PythonDivideNoPrint
+Ping:	No Ping:	Diff:
+
+PythonDividePrint
+Ping:	No Ping:	Diff:
+
+PythonFileWriteTest1
+Ping:	No Ping:	Diff:
+
+PythonFileWriteTest10ms1
+Ping:	No Ping:	Diff:
+
+PythonMultipleNoPrint
+Ping:	No Ping:	Diff:
+
+PythonMultiplyPrint
+Ping:	No Ping:	Diff:
+
+PythonSubtractNoPrint
+Ping:	No Ping:	Diff:
+
+PythonSubtractPrint
+Ping:	No Ping:	Diff:
