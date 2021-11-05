@@ -1,5 +1,5 @@
 10ms500pingNoPrintOut
-Ping: 2.981	No Ping: 2.781	Diff: 0.2
+Ping: 2.981	No Ping: 2.796	Diff: 0.185
 
 10ms500PingPrintout
 Ping:	No Ping:	Diff:
