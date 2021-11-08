@@ -1,3 +1,5 @@
+Overall, I've noticed that there are too many jumps in wattage while nothing is running, screwing up quite a lot of data
+
 10ms500pingNoPrintOut
 Ping: 2.972	No Ping: 2.782	Diff: 0.19
 
@@ -8,19 +10,19 @@ CFileWriteTest1
 Ping: 3.534	No Ping: 3.120	Diff: 0.414
 
 CFileWriteTest10ms1
-Ping: 2.845	No Ping: 2.749	Diff: 0.096
+Ping: 2.845	No Ping: 2.749	Diff: 0.096 ~> It's very difficult to tell where the test is running and where it's not on this graph
 
 PythonAddNoPrint
 Ping: 3.210	No Ping: 2.763	Diff: 0.447
 
 PythonAddPrint
-Ping:	No Ping:	Diff:
+Ping: 3.531	No Ping: 3.306	Diff: 0.225 ~> the idle values have a lot of jumps, the data got very messed up
 
 PythonDivideNoPrint
-Ping:	No Ping:	Diff:
+Ping: 2.943	No Ping: 2.819	Diff: 0.124
 
 PythonDividePrint
-Ping:	No Ping:	Diff:
+Ping: 2.803	No Ping: 2.765	Diff: 0.038 ~> There is far too much data to sift through for this one
 
 PythonFileWriteTest1
 Ping:	No Ping:	Diff:
