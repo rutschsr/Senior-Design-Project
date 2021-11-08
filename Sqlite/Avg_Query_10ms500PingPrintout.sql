@@ -22,4 +22,4 @@ SELECT avg(wattage) FROM PowerMeasurement
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:22:12.250444') AND strftime('%H %M %S %f', '2021-11-01 16:22:22.731410')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:22:38.651903') AND strftime('%H %M %S %f', '2021-11-01 16:22:48.903588')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:23:05.380560') AND strftime('%H %M %S %f', '2021-11-01 16:23:15.575262')
-	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:23:19.216328') AND strftime('%H %M %S %f', '2021-11-01 16:23:29.492682')
+	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:23:19.216328') AND strftime('%H %M %S %f', '2021-11-01 16:23:29.492682');

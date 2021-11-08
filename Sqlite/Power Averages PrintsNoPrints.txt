@@ -1,17 +1,17 @@
 10ms500pingNoPrintOut
-Ping: 2.981	No Ping: 2.796	Diff: 0.185
+Ping: 2.972	No Ping: 2.782	Diff: 0.19
 
 10ms500PingPrintout
 Ping: 3.057	No Ping: 2.807	Diff: 0.25
 
 CFileWriteTest1
-Ping:	No Ping:	Diff:
+Ping: 3.534	No Ping: 3.120	Diff: 0.414
 
 CFileWriteTest10ms1
-Ping:	No Ping:	Diff:
+Ping: 2.845	No Ping: 2.749	Diff: 0.096
 
 PythonAddNoPrint
-Ping:	No Ping:	Diff:
+Ping: 3.210	No Ping: 2.763	Diff: 0.447
 
 PythonAddPrint
 Ping:	No Ping:	Diff:

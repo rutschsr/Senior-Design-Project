@@ -2,7 +2,8 @@
 
 -- The average of the ping current values, this will be the second value displayed
 SELECT avg(wattage) FROM PowerMeasurement 
-	WHERE strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:27.864440') AND strftime('%H %M %S %f', '2021-11-01 16:02:30.686099')
+	WHERE strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-10-28 16:32:28.407283') AND strftime('%H %M %S %f', '2021-10-28 16:32:37.798752')
+	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:27.864440') AND strftime('%H %M %S %f', '2021-11-01 16:02:30.686099')
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:31.845545') AND strftime('%H %M %S %f', '2021-11-01 16:02:41.401102')
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:48.351597') AND strftime('%H %M %S %f', '2021-11-01 16:02:57.661253')
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 16:03:04.533569') AND strftime('%H %M %S %f', '2021-11-01 16:03:13.815039')
@@ -19,7 +20,8 @@ SELECT avg(wattage) FROM PowerMeasurement
 UNION
 -- The average of the nonping current values, this will be the first value displayed
 SELECT avg(wattage) FROM PowerMeasurement 
-	WHERE strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:27.864440') AND strftime('%H %M %S %f', '2021-09-30 11:08:13.729347')
+	WHERE strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-10-28 16:32:28.407283') AND strftime('%H %M %S %f', '2021-10-28 16:32:37.798752')
+	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:27.864440') AND strftime('%H %M %S %f', '2021-09-30 11:08:13.729347')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:31.845545') AND strftime('%H %M %S %f', '2021-11-01 16:02:41.401102')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:02:48.351597') AND strftime('%H %M %S %f', '2021-11-01 16:02:57.661253')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 16:03:04.533569') AND strftime('%H %M %S %f', '2021-11-01 16:03:13.815039')

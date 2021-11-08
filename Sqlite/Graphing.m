@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='PythonSubtractPrint.sqlite3'; %Set File name here
+filename='10ms500pingNoPrintout.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
