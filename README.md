@@ -12,7 +12,7 @@
 # Abstract
 The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  
 
-Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations.
+Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This has the ultimate goal of calculating power and cost required to complete operations such as sending emails with or without an image in the signature line or autocompleting a line of text in a search box.
 
 # Project Background & Research
 
@@ -33,6 +33,13 @@ Before work on the project began, we changed the overall scope of the project to
 # Future Project Goals
 # Conclusion
 
+# Ethical Impact
+There were not many ethics decisions required in this project, since it is research based on existing products and services. There could, however, be an ethical impact stemming from the results of the research. This research is designed to determine the cost of small menial computer tasks that are automatically completed in the background on devices many times a day. The sum of all the power used by these operations could prove to be incredibly large, and ethical considerations into weather the power usage cost of having these operations versus there small added benefit are really necessary. The main ethical considerations from this project stem from the results, which could show the large amount of power used globally for computer tasks that have a very small added benefit.
+
+# Engineering Decisions
+The main engineering decisions made for this project were decisions related to collecting and storing the current usage information from the raspberry pi. The test raspberry pi is a raspberry pi 3B+ with a micro USB power input that can draw up to 2A at 5VDC. There are plenty of small current measurement devices availible for Testing USB power consumption, but none have a easily availible method to record the data, especially at a high sample rate. After verifying current usage of a few basic scripts (ping scripts) it was determined that a Texas Instruments INA219 based sensor could be used to record data. This sensor PCB has a shunt resistor and a TI INA219 sensor, along with everything necessary for I2C serial communication. A arduino UNO was chosen to connect the sensor to a computer for data storage due to its low cost and ease of programming with libraries availible for the sensor.
+
+Other engineering decisions made for this project so far have included the decision to use a SQLITE file to store the current usage versus alternative formats such as .csv. SQLITE was chosen because of its inherent stability over .csv, in that it is much more likely to be corrupted if it is closed improperly.
 
 # Our notes (to be ommitted or relocated)
 Be sure to discuss:
