@@ -24,7 +24,7 @@ SELECT avg(wattage) FROM PowerMeasurement
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 17:30:55.278453') AND strftime('%H %M %S %f', '2021-11-01 17:30:57.334778')
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 17:30:58.223450') AND strftime('%H %M %S %f', '2021-11-01 17:30:59.435671')
 	OR strftime('%H %M %S %f', date) BETWEEN strftime('%H %M %S %f', '2021-11-01 17:31:00.090912') AND strftime('%H %M %S %f', '2021-11-01 17:31:00.934635')
-	OR strftime('%H %M %S %f', date) < strftime('%H %M %S %f', '2021-11-01 17:31:00.947202')
+	AND strftime('%H %M %S %f', date) < strftime('%H %M %S %f', '2021-11-01 17:31:00.947202')
 UNION
 -- The average of the nonping current values, this will be the first value displayed
 SELECT avg(wattage) FROM PowerMeasurement 
@@ -47,4 +47,4 @@ SELECT avg(wattage) FROM PowerMeasurement
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 17:30:53.520954') AND strftime('%H %M %S %f', '2021-11-01 17:30:57.334778')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 17:30:58.223450') AND strftime('%H %M %S %f', '2021-11-01 17:30:59.435671')
 	OR strftime('%H %M %S %f', date) NOT BETWEEN strftime('%H %M %S %f', '2021-11-01 17:31:00.090912') AND strftime('%H %M %S %f', '2021-11-01 17:31:00.934635')
-	OR strftime('%H %M %S %f', date) < strftime('%H %M %S %f', '2021-11-01 17:31:00.947202');
+	AND strftime('%H %M %S %f', date) < strftime('%H %M %S %f', '2021-11-01 17:31:00.947202');
