@@ -5,12 +5,12 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='MultipleRecordingTest.sqlite3'; %Set File name here
+filename='10ms500PingNoPrintout.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
-sqlquery='SELECT date FROM PowerMeasurement';
-sqlquery2='SELECT wattage FROM PowerMeasurement';
+sqlquery='SELECT date FROM PowerMeasurement WHERE date>= ''2021-10-31 14:00:00''';
+sqlquery2='SELECT wattage FROM PowerMeasurement WHERE date>= ''2021-10-31 14:00:00''';
 
 % Older Versions of the recording script require different SQL Queries
 %sqlquery='SELECT date FROM current';
@@ -25,6 +25,7 @@ datesdouble=datetime(dates);
 wattagedouble=str2double(string(wattage));
     
 %% PLOT    
+figure
 plot(datesdouble,wattagedouble);
 xtickformat('yyyy-MM-dd mm:ss');
 ylim([0,10]);

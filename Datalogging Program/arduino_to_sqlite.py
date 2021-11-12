@@ -24,7 +24,7 @@ try: #Add another column here for voltage: , voltage real
     cur.execute('''CREATE TABLE PowerMeasurement
                (date text, wattage real)''')
 except Error as e:
-    print(e)
+    print(e) 
 
 
 con.commit
