@@ -32,6 +32,8 @@ Before work on the project began, we changed the overall scope of the project to
 
 # Future Project Goals
 # Conclusion
+<<<<<<< HEAD
+=======
 
 
 # Our notes (to be ommitted or relocated)
@@ -135,3 +137,4 @@ We then changed this to include a wait statement so that it would take approximi
 This was also applied to the script that counts to 500 without printing to the terminal as this script completes in 0.001071s
 
 Obviously this approach may have issues, considering now there is a "sleep()" timer command also consuming power.
+>>>>>>> parent of a49f60a (Update README.md)
