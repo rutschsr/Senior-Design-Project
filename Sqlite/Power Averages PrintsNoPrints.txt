@@ -1,0 +1,43 @@
+Overall, I've noticed that there are too many jumps in wattage while nothing is running, screwing up quite a lot of data
+
+10ms500pingNoPrintOut
+Ping: 2.972	No Ping: 2.782	Diff: 0.19
+
+10ms500PingPrintout
+Ping: 3.057	No Ping: 2.807	Diff: 0.25
+
+CFileWriteTest1
+Ping: 3.534	No Ping: 3.120	Diff: 0.414
+
+CFileWriteTest10ms1
+Ping: 2.845	No Ping: 2.749	Diff: 0.096 ~> It's very difficult to tell where the test is running and where it's not on this graph
+
+PythonAddNoPrint
+Ping: 3.210	No Ping: 2.763	Diff: 0.447
+
+PythonAddPrint
+Ping: 3.562	No Ping: 2.658	Diff: 0.904
+
+PythonDivideNoPrint
+Ping: 2.943	No Ping: 2.819	Diff: 0.124
+
+PythonDividePrint
+Ping: 2.992	No Ping: 2.803	Diff: 0.189
+
+PythonFileWriteTest1
+Ping: 3.250	No Ping: 2.963	Diff: 0.287
+
+PythonFileWriteTest10ms1
+Ping: 2.991	No Ping: 2.571	Diff: 0.42
+
+PythonMultipleNoPrint
+Ping: 2.931	No Ping: 2.736	Diff: 0.195
+
+PythonMultiplyPrint
+Ping: 2.955	No Ping: 2.810	Diff: 0.145
+
+PythonSubtractNoPrint
+Ping: 3.491	No Ping: 2.848	Diff: 0.643
+
+PythonSubtractPrint
+Ping: 3.486	No Ping: 2.590	Diff: 0.896
