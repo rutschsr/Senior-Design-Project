@@ -23,6 +23,7 @@ Before work on the project began, we changed the overall scope of the project to
 
 (not the what, more the data)
 # Data Findings & Interpretation
+<!--Add charts with data from averages for each of the below -->
 * Python Addition/Subtraction/Multiply/Divide print
 * Python Addition/Subtraction/Multiply/Divide no print
 * Python Write to file
@@ -30,13 +31,28 @@ Before work on the project began, we changed the overall scope of the project to
 * Python LAN ping print
 * Python LAN ping no print
 
+| Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)|
+| ----------- | ----------- | ------ |
+| Python LAN Ping & Print | 0.25 |  |
+| Python LAN Ping No Print | 0.19 |  |
+| Python Addition & Print | 0.904 |  |
+| Python Subtraction & Print | 0.896  | 0.000002006754176 |
+| Python Multiplication & Print | 0.145 | 0.0000001696257125 |
+| Python Division & Print | 0.189 |  |
+| Python Addition No Print | 0.447 |  |
+| Python Subtraction No Print | 0.643 | 0.000001060559699 |
+| Python Multiplication No Print | 0.195 | 0.00000017335047 |
+| Python Division No Print | 0.124 |  |
+| Python Write To File | 0.42 |  |
+| Objective-C Write to File | 0.414 |  |
+
 # Future Project Goals
 # Conclusion
-<<<<<<< HEAD
-=======
 
 
-# Our notes (to be ommitted or relocated)
+
+
+<!-- # Our notes (to be ommitted or relocated)
 Be sure to discuss:
 * ABET: What decisions and why, ethical impact
 
@@ -137,4 +153,4 @@ We then changed this to include a wait statement so that it would take approximi
 This was also applied to the script that counts to 500 without printing to the terminal as this script completes in 0.001071s
 
 Obviously this approach may have issues, considering now there is a "sleep()" timer command also consuming power.
->>>>>>> parent of a49f60a (Update README.md)
+>>>>>>> parent of a49f60a (Update README.md) -->

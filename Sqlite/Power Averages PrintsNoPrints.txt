@@ -1,10 +1,10 @@
 Overall, I've noticed that there are too many jumps in wattage while nothing is running, screwing up quite a lot of data
 
 10ms500pingNoPrintOut
-Ping: 2.972	No Ping: 2.782	Diff: 0.19
+Ping: 2.972	No Ping: 2.782	Diff: 0.19 Time: 
 
 10ms500PingPrintout
-Ping: 3.057	No Ping: 2.807	Diff: 0.25
+Ping: 3.057	No Ping: 2.807	Diff: 0.25 Time:
 
 CFileWriteTest1
 Ping: 3.534	No Ping: 3.120	Diff: 0.414
@@ -31,13 +31,13 @@ PythonFileWriteTest10ms1
 Ping: 2.991	No Ping: 2.571	Diff: 0.42
 
 PythonMultipleNoPrint
-Ping: 2.931	No Ping: 2.736	Diff: 0.195
+Ping: 2.931	No Ping: 2.736	Diff: 0.195 AvgTime: 0.8889768 Trials: 1000000 Time/Trial: 0.00000008889768 AvgPwr/Operation: 0.00000017335047
 
 PythonMultiplyPrint
-Ping: 2.955	No Ping: 2.810	Diff: 0.145
+Ping: 2.955	No Ping: 2.810	Diff: 0.145 AvgTime: 1.1698325 Trials: 1000000 Time/Trial: 0.0000011698325 AvgPwr/Operation: 0.0000001696257125
 
 PythonSubtractNoPrint
-Ping: 3.491	No Ping: 2.848	Diff: 0.643
+Ping: 3.491	No Ping: 2.848	Diff: 0.643 AvgTime: 1.649393 Trials: 1000000 Time/Trial: 0.000001649393 AvgPwr/Operation: 0.000001060559699
 
 PythonSubtractPrint
-Ping: 3.486	No Ping: 2.590	Diff: 0.896
+Ping: 3.486	No Ping: 2.590	Diff: 0.896 AvgTime: 2.239681 Trials: 1000000 Time/Trial: 0.000002239681 AvgPwr/Operation: 0.000002006754176
