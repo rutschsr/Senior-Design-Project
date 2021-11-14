@@ -41,7 +41,7 @@ Before work on the project began, we changed the overall scope of the project to
 | Python Division & Print | 0.189 |  |
 | Python Addition No Print | 0.447 |  |
 | Python Subtraction No Print | 0.643 | 0.000001060559699 |
-| Python Multiplication No Print | 0.195 | 0.00000017335047 |
+| Python Multiplication by constant 2 No Print | 0.195 | 0.00000017335047 |
 | Python Division No Print | 0.124 |  |
 | Python Write To File | 0.42 |  |
 | Objective-C Write to File | 0.414 |  |
