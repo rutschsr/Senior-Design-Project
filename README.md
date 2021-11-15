@@ -30,6 +30,8 @@ Before work on the project began, we changed the overall scope of the project to
 * Objective-C Write to file
 * Python LAN ping print
 * Python LAN ping no print
+  
+  Our Python multiplication program multiplied by a constant of two. This means that it was equivalent to a left shift, and the Python interpreter likely simplified this event, which is why the power consumption recorded was so low.
 
 | Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)|
 | ----------- | ----------- | ------ |
@@ -37,14 +39,14 @@ Before work on the project began, we changed the overall scope of the project to
 | Python LAN Ping No Print | 0.19 |  |
 | Python Addition & Print | 0.904 |  |
 | Python Subtraction & Print | 0.896  | 0.000002006754176 |
-| Python Multiplication & Print | 0.145 | 0.0000001696257125 |
+| Python Multiplication by Constant 2 & Print | 0.145 | 0.0000001696257125 |
 | Python Division & Print | 0.189 |  |
 | Python Addition No Print | 0.447 |  |
 | Python Subtraction No Print | 0.643 | 0.000001060559699 |
-| Python Multiplication by constant 2 No Print | 0.195 | 0.00000017335047 |
+| Python Multiplication by Constant 2 No Print | 0.195 | 0.00000017335047 |
 | Python Division No Print | 0.124 |  |
-| Python Write To File | 0.42 |  |
-| Objective-C Write to File | 0.414 |  |
+| Python Write To File | 0.42 | 0.000001886 |
+| Objective-C Write to File | 0.414 | 0.000000072763925056582 |
 
 # Future Project Goals
 # Conclusion

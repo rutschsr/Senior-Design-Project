@@ -7,7 +7,7 @@ Ping: 2.972	No Ping: 2.782	Diff: 0.19 Time:
 Ping: 3.057	No Ping: 2.807	Diff: 0.25 Time:
 
 CFileWriteTest1
-Ping: 3.534	No Ping: 3.120	Diff: 0.414
+No Ping: 3.31275 Ping: 3.117095044	Diff: 0.19565496 AvgTime: 37.189921 Trials: 100000000 Time/Trial: 0.000000371899 AvgPwr/Operation: 0.000000072763925056582
 
 CFileWriteTest10ms1
 Ping: 2.845	No Ping: 2.749	Diff: 0.096 ~> It's very difficult to tell where the test is running and where it's not on this graph
@@ -28,7 +28,7 @@ PythonFileWriteTest1
 Ping: 3.250	No Ping: 2.963	Diff: 0.287
 
 PythonFileWriteTest10ms1
-Ping: 2.991	No Ping: 2.571	Diff: 0.42
+Ping: 2.991	No Ping: 2.571	Diff: 0.42 AvgTime: 2.82 Trials: 1000000 Time/Trial: 0.00000283 AvgPwr/Operation: 0.0000011886
 
 PythonMultipleNoPrint
 Ping: 2.931	No Ping: 2.736	Diff: 0.195 AvgTime: 0.8889768 Trials: 1000000 Time/Trial: 0.00000008889768 AvgPwr/Operation: 0.00000017335047
