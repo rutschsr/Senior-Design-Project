@@ -35,18 +35,18 @@ Before work on the project began, we changed the overall scope of the project to
 
 | Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)|
 | ----------- | ----------- | ------ |
-| Python LAN Ping & Print | 0.25 |  |
-| Python LAN Ping No Print | 0.19 |  |
-| Python Addition & Print | 0.904 |  |
-| Python Subtraction & Print | 0.896  | 0.000002006754176 |
-| Python Multiplication by Constant 2 & Print | 0.145 | 0.0000001696257125 |
-| Python Division & Print | 0.189 |  |
-| Python Addition No Print | 0.447 |  |
-| Python Subtraction No Print | 0.643 | 0.000001060559699 |
-| Python Multiplication by Constant 2 No Print | 0.195 | 0.00000017335047 |
-| Python Division No Print | 0.124 |  |
-| Python Write To File | 0.42 | 0.000001886 |
-| Objective-C Write to File | 0.414 | 0.000000072763925056582 |
+| Python LAN Ping & Print | 0.25 | 0.00286 |
+| Python LAN Ping No Print | 0.19 | 0.001967564 |
+| Python Addition & Print | 0.904 | 3.47814E-05 |
+| Python Subtraction & Print | 0.896  | 2.00675E-06 |
+| Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 |
+| Python Division & Print | 0.189 | 0.000765223 |
+| Python Addition No Print | 0.447 | 1.15415E-06 |
+| Python Subtraction No Print | 0.643 | 1.05705E-06 |
+| Python Multiplication by Constant 2 No Print | 0.195 | 0.00048287 |
+| Python Division No Print | 0.124 | 0.000278534 |
+| Python Write To File | 0.42 | 0.1.1844E-06 |
+| Objective-C Write to File | 0.414 | 7.27639E-08 |
 
 # Future Project Goals
 # Conclusion
@@ -155,4 +155,16 @@ We then changed this to include a wait statement so that it would take approximi
 This was also applied to the script that counts to 500 without printing to the terminal as this script completes in 0.001071s
 
 Obviously this approach may have issues, considering now there is a "sleep()" timer command also consuming power.
->>>>>>> parent of a49f60a (Update README.md) -->
+>>>>>>> parent of a49f60a (Update README.md) 
+
+2021-11-15
+
+Values implemented into table. Data analysis was done using the number of trials we completed, and high accuracy estimated values for time from the SQL statements. The method used to measure this was. Copy data from SQL statement file to notepad++ search and replace all data with the exception of the seconds part of the time out. Copy and paste into matlab, calculate the average time. Future goal would be to implement a python search and replace script to do this automatically, similar to what I (sam) have used in previous work projects.
+
+
+
+Excel Spreadsheet PowerCalculations was used to calculate the power and time values. Inputs are WattageIdle, Wattage Operation, Average Time (calculated above) and Number of Operations. This greatly simplifies the work from doing it all by hand.
+
+-->
+
+
