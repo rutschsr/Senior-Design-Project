@@ -21,7 +21,7 @@ Before work on the project began, we changed the overall scope of the project to
   <img height="600" src="./Diagrams/Hardware%20setup.drawio.png">
 </p>
 
-(not the what, more the data)
+<!--(not the what, more the data)-->
 # Data Findings & Interpretation
 <!--Add charts with data from averages for each of the below -->
 * Python Addition/Subtraction/Multiply/Divide print
