@@ -3,16 +3,21 @@
 
 ## Table of Contents
 **[Abstract](#abstract)**<br>
+**[Introduction](#introduction)**<br>
 **[Project Background & Research](#project-background--research)**<br>
 **[Solution Implementation](#solution-implementation)**<br>
 **[Data Findings & Interpretation](#data-findings--interpretation)**<br>
 **[Future Project Goals](#future-project-goals)**<br>
 **[Conclusion](#conclusion)**<br>
 
+
 # Abstract
 The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  
 
 Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations.
+
+# Introduction
+Every single process run on a computer consumes power, no matter how small it may seem. Even adding a single line of code or an image to a document costs power, or adding a small logo in the footnote of an email can cost extra. While this extra power draw may seem miniscule, it can add up over time and with multiple people connected to the same server, the cost multiplies with each user. So, the question must be asked: are these small processes anything to worry about? Is the extra power bump from running these processes significant and should they be kept to a minimum? (lol, this probably needs altered quite a bit)
 
 # Project Background & Research
 
@@ -49,6 +54,10 @@ Before work on the project began, we changed the overall scope of the project to
 | Objective-C Write to File | 0.414 | 7.27639E-08 |
 
 # Future Project Goals
+So far, the majority of what we have done is setting up the problem and basic testing to ensure our setup works as we'd expect. In the future, we plan to move onto the next step for the project, that is, the meat of the project. We will be setting up an email server and a script to send emails. Using these, we will be testing the different kinds of content that can be sent via email and how they affect power consumption.
+
+After gathering data from the email servers, we will (actually, what are we doing beyond sending emails?)
+
 # Conclusion
 
 
