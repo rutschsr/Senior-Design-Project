@@ -108,7 +108,7 @@ To calculate the average time each computing operation took we simply took the a
   
   <!-- Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
 
-| Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kwh) |
+| Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
 | ----------- | ----------- | ------ | --- |
 | Python LAN Ping & Print | 0.25 | 0.00286 | 7.94445E-10 |
 | Python LAN Ping No Print | 0.19 | 0.001967564 | 5.46546E-10|
