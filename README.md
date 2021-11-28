@@ -65,7 +65,7 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 
 <br>
 <br>
-  Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
+  The arduino reported the data with a timing of 10ms through the serial connection to the PC, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
   <br>
   <br>
   In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
@@ -76,12 +76,12 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
-<div style="page-break-after: always"></div>
+
 
 
 
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
-
+<div style="page-break-after: always"></div>
 <br>
 <br>
 The recording procedure utilized for all of the tests was quite simple. The test raspberry pi was powered on and connected to our test ethernet network router. The raspberry pi is powered through the INA 219 power measurement IC. Next, a SSH (secure shell) connection was made over the network connection to the raspberry pi using Visual Studio Code Remote SSH. Through VSCode, the test scripts were uploaded to the pi and modified. Then for each test, the data collection python script was started on the data collection PC. After several seconds of standby data were collected, the test script for the raspberry pi was started through VSCode. The preformance of both the recording script, and the test script was monitored during the test to make sure there were no unexpected abnormalities. After the test script was done running, several seconds of standby data at the end were collected before stopping the data collection script. Both the SSH connection and the data collection were done using the same laptop. This process was repeated several times for each test operation in order to get a more accurate average of the power consumption.
