@@ -13,6 +13,7 @@
 **[Future Project Goals](#future-project-goals)**<br>
 **[Conclusion](#conclusion)**<br>
 
+<div style="page-break-after: always"></div>
 
 # Abstract
 The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  After some time had passed in-between semesters, our team and advisors decided to change the scope of the project to develop a hardware solution that could measure the power consumption of various computing tasks.
@@ -20,22 +21,33 @@ The original goal of this project was to create a power measurement system that 
 With this new goal in mind, we developed a list of various computing operations we wanted to measure the power consumption for.  This list included several simple scipts that performed  different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost.  What our team wanted to understand from our data collection was how much power these different operations consume and determine tasks that required signifigcantly more energy than others.
 
 # Introduction
-Our team's focus this first semester of the project was to determine the fesabiity of measuring current draw from a computing system as a whole.  Very early on, a decision was made to conduct our experiments on a Raspberry Pi SBC.  We weren't sure if we would be able to observe current changes when running a script, so we thought it best to initially try on a Rasperry Pi since they have very low power consumption for a system running a full OS.  A typical desktop PC may (1) consume several hundred watts at idle and (2) across several different DC voltage rails.  These two factors could make data collection on this sort of system complex, so we stuck with the Raspberry Pi as a proof of concept.  
+Our team's focus this first semester of the project was to determine the fesabiity of measuring current draw from a computing system as a whole.  Very early on, a decision was made to conduct our experiments on a Raspberry Pi SBC.  We weren't sure if we would be able to observe current changes when running a script, so we thought it best to initially try on a Rasperry Pi since they have very low power consumption for a system running a full OS.  A typical desktop PC may <b>(1)</b> consume several hundred watts at idle and <b>(2)</b> across several different DC voltage rails.  These two factors could make data collection on this sort of system complex, so we stuck with the Raspberry Pi as a proof of concept.  
 
-# Project Background 
+<div style="page-break-after: always"></div>
+
+# Project Background
+Our team and advisors came up with a small list of scripts for which we wanted to monitor power consumption for.  This script can be seen below.
+* Arithmetic (add/subtract, multiply, divide)
+* Sending emails
+* Writing to disk (SD card on RPi)
+* Printing to console
+* Pinging
+* Python vs. Objective-C
+
+As mentioned earlier, this semester's focus was a proof of concept.  We knew that eventually we'd want to monitor power consumption for more complex computing events such as the autosuggest feature on the Google search bar.  We wanted to stick with more rudementary operations so we could more easily validate our findings.  Once we had our test parameters set for what sorts of operations we'd be performing on our system, we'd have to move on to research methods of measuring current draw in our specific test environment that we'd defined with our scripts.
 
 # Project Research
 
+
+<div style="page-break-after: always"></div>
+
 # Solution Implementation
-  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA 219 utilizes I2C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
+  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA 219 utilizes I<sup>2</sup>C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
 
-  We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the Power consumption for each computing event event. 
-<br>
-<br>
-
+  We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event event. 
 
 <p align="center">
-  <img height="600" src="./Diagrams/Hardware%20setup%20Fall.png">
+  <img width="800" src="./Diagrams/Hardware%20setup%20Fall.png">
 </p>
 
 **Figure 1:** Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The arduino is used for data collection, and the router is used for communicating with the raspberry pi as well as planning for future use.
@@ -50,7 +62,7 @@ Our team's focus this first semester of the project was to determine the fesabii
   <br>
 
   <p align="center">
-  <img height="600" src="./Sqlite/PythonFileWriteFinal.png">
+  <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
 <div style="page-break-after: always"></div>
@@ -58,6 +70,8 @@ Our team's focus this first semester of the project was to determine the fesabii
 
 
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python.
+
+<div style="page-break-after: always"></div>
 
 <!--(not the what, more the data)-->
 # Data Findings & Interpretation
@@ -85,6 +99,8 @@ Our team's focus this first semester of the project was to determine the fesabii
 | Python Division No Print | 0.124 | 0.000278534 | 9.02944E-11 |
 | Python Write To File | 0.42 | 0.1.1844E-06 | 3.29E-13 |
 | Objective-C Write to File | 0.414 | 7.27639E-08 | 2.02122E-14 |
+
+<div style="page-break-after: always"></div>
 
 # Future Project Goals
 So far, the majority of what we have done is setting up the problem and basic testing to ensure our setup works as we'd expect. In the future, we plan to move onto the next step for the project, that is, the meat of the project. We will be setting up an email server and a script to send emails. Using these, we will be testing the different kinds of content that can be sent via email and how they affect power consumption.
