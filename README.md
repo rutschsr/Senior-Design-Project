@@ -56,7 +56,7 @@ Every single process run on a computer consumes power, no matter how small it ma
 # Future Project Goals
 So far, the majority of what we have done is setting up the problem and basic testing to ensure our setup works as we'd expect. In the future, we plan to move onto the next step for the project, that is, the meat of the project. We will be setting up an email server and a script to send emails. Using these, we will be testing the different kinds of content that can be sent via email and how they affect power consumption.
 
-After gathering data from the email servers, we will (actually, what are we doing beyond sending emails?)
+After gathering data from the email servers, we will be looking into the Google Search Bar. Or, more specifically, the auto fill feature of the search bar. The auto fill feature of the Google Search Bar is a process that gives the user options to fill in what they've already typed. For instance, if the user typed "How to" into the search bar, Google might suggest that the query they're searching for is to "how to commit murder", or "how to hide a body", or "how to remove the evidence". Our goal in this instance is to determine how much power having that auto fill feature on at all times will take up over not having it on at all.
 
 # Conclusion
 
