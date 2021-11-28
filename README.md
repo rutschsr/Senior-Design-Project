@@ -1,6 +1,6 @@
 # Miami University ECE 448 Senior Design Project Report
 ## Power Measurement of a Computing System (Fall 2021)
-### By: Sam Rutschilling ('22), Jordan Smith ('22), Owen Hardy ('22)
+### By: Sam Rutschilling ('22), Jordan Smith ('22), & Owen Hardy ('22)
 ### Advisors: Dr. Peter Jamieson & Dr. Mark Scott
 
 <p align="center">
