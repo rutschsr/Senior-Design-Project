@@ -13,6 +13,7 @@
 **[Future Project Goals](#future-project-goals)**<br>
 **[Conclusion](#conclusion)**<br>
 
+<div style="page-break-after: always"></div>
 
 # Abstract
 The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  After some time had passed in-between semesters, our team and advisors decided to change the scope of the project to develop a hardware solution that could measure the power consumption of various computing tasks.
@@ -22,11 +23,13 @@ With this new goal in mind, we developed a list of various computing operations 
 # Introduction
 Our team's focus this first semester of the project was to determine the fesabiity of measuring current draw from a computing system as a whole.  Very early on, a decision was made to conduct our experiments on a Raspberry Pi SBC.  We weren't sure if we would be able to observe current changes when running a script, so we thought it best to initially try on a Rasperry Pi since they have very low power consumption for a system running a full OS.  A typical desktop PC may (1) consume several hundred watts at idle and (2) across several different DC voltage rails.  These two factors could make data collection on this sort of system complex, so we stuck with the Raspberry Pi as a proof of concept.  
 
-
+<div style="page-break-after: always"></div>
 
 # Project Background 
 
 # Project Research
+
+<div style="page-break-after: always"></div>
 
 # Solution Implementation
   After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement 
@@ -34,6 +37,8 @@ Our team's focus this first semester of the project was to determine the fesabii
 <p align="center">
   <img height="600" src="./Diagrams/Hardware%20setup%20Fall.png">
 </p>
+
+<div style="page-break-after: always"></div>
 
 <!--(not the what, more the data)-->
 # Data Findings & Interpretation
@@ -61,6 +66,8 @@ Our team's focus this first semester of the project was to determine the fesabii
 | Python Division No Print | 0.124 | 0.000278534 | 9.02944E-11 |
 | Python Write To File | 0.42 | 0.1.1844E-06 | 3.29E-13 |
 | Objective-C Write to File | 0.414 | 7.27639E-08 | 2.02122E-14 |
+
+<div style="page-break-after: always"></div>
 
 # Future Project Goals
 So far, the majority of what we have done is setting up the problem and basic testing to ensure our setup works as we'd expect. In the future, we plan to move onto the next step for the project, that is, the meat of the project. We will be setting up an email server and a script to send emails. Using these, we will be testing the different kinds of content that can be sent via email and how they affect power consumption.
