@@ -5,12 +5,12 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='PythonFileWriteTest10ms1.sqlite3'; %Set File name here
+filename='PythonFileWriteTest1.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
-sqlquery='SELECT date FROM PowerMeasurement WHERE date BETWEEN ''2021-10-28 16:56:02.51'' AND ''2021-10-29 14:30:00''';
-sqlquery2='SELECT wattage FROM PowerMeasurement WHERE date BETWEEN ''2021-10-28 16:56:02.51'' AND ''2021-10-29 14:30:00:00''';
+sqlquery='SELECT date FROM PowerMeasurement WHERE date BETWEEN ''2021-10-28 14:00:00'' AND ''2021-10-29 14:00:00''';
+sqlquery2='SELECT wattage FROM PowerMeasurement WHERE date>= ''2021-10-28 14:00:00''';
 
 % Older Versions of the recording script require different SQL Queries
 %sqlquery='SELECT date FROM current';
@@ -28,7 +28,7 @@ wattagedouble=str2double(string(wattage));
 figure
 plot(datesdouble,wattagedouble);
 xtickformat('yyyy-MM-dd mm:ss');
-ylim([2,4]);
+ylim([0,10]);
 title(filename)
 ylabel('Wattage')
 xlabel('DateTime')
