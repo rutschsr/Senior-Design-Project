@@ -17,11 +17,15 @@ The original goal of this project was to create a power measurement system that 
 Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost. The ultimate goal of this is to understand how much power consumption certain automatic background tasks use on computers and other devices to determine if the slight added benefit of these operations is truly worth it.
 
 # Introduction
-Every single process run on a computer consumes power, no matter how small it may seem. Even adding a single line of code or an image to a document costs power, or adding a small logo in the footnote of an email can cost extra. While this extra power draw may seem miniscule, it can add up over time and with multiple people connected to the same server, the cost multiplies with each user. So, the question must be asked: are these small processes anything to worry about? Is the extra power bump from running these processes significant and should they be kept to a minimum? (lol, this probably needs altered quite a bit)
+Every single process running on a computer consumes power, no matter how small it may seem. Even adding a single line of code or an image to a document costs power, or adding a small logo in the footnote of an email can cost extra. While this extra power draw may seem miniscule, it can add up over time and with multiple people connected to the same server, the cost multiplies with each user. So, the question must be asked: are these small processes anything to worry about? Is the extra power bump from running these processes significant and should they be kept to a minimum? (lol, this probably needs altered quite a bit)
 
-# Project Background & Research
+# Project Background 
+
+# Project Research
 
 # Solution Implementation
+  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement 
+
 <p align="center">
   <img height="600" src="./Diagrams/Hardware%20setup.drawio.png">
 </p>
@@ -36,12 +40,12 @@ Every single process run on a computer consumes power, no matter how small it ma
 * Python LAN ping print
 * Python LAN ping no print
   
-  Our Python multiplication program multiplied by a constant of two. This means that it was equivalent to a left shift, and the Python interpreter likely simplified this event, which is why the power consumption recorded was so low.
+  <!-- Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
 
-| Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)|
-| ----------- | ----------- | ------ |
-| Python LAN Ping & Print | 0.25 | 0.00286 |
-| Python LAN Ping No Print | 0.19 | 0.001967564 |
+| Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kwh) |
+| ----------- | ----------- | ------ | --- |
+| Python LAN Ping & Print | 0.25 | 0.00286 | 5.57432E-13 |
+| Python LAN Ping No Print | 0.19 | 0.001967564 | 2.93624E-13|
 | Python Addition & Print | 0.904 | 3.47814E-05 |
 | Python Subtraction & Print | 0.896  | 2.00675E-06 |
 | Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 |
