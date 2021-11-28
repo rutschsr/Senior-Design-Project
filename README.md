@@ -50,6 +50,9 @@ Every single process running on a computer consumes power, no matter how small i
   <img height="600" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
+<div style="page-break-after: always"></div>
+
+
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python.
 
 <!--(not the what, more the data)-->
