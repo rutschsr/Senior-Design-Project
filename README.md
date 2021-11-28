@@ -77,9 +77,6 @@ Through some research on various electronics parts distributors, we found the Te
 </p>
 
 
-
-
-
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the Debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateaued" area in the center is the power consumption during the Python file write test.
 <div style="page-break-after: always"></div>
 <br>
@@ -131,6 +128,9 @@ So far, the majority of what we have done is setting up the problem and basic te
 After gathering data from the email servers, we will be looking into the Google Search Bar. Or, more specifically, the auto-fill feature of the search bar. The auto-fill feature of the Google Search Bar is a process that gives the user options to fill in what they've already typed. For instance, if the user typed "How to" into the search bar, Google might suggest that the query they're searching for is "how to commit murder", or "how to hide a body", or "how to remove the evidence". Our goal in this instance is to determine how much power having that auto-fill feature on at all times will take up over not having it on at all.
 
 # Conclusion
+
+
+<div style="page-break-after: always"></div>
 
 # Reflection
 * Your understanding of the professional and ethical responsibility as engineers;
