@@ -76,11 +76,11 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
-<div style="page-break-after: always"></div>
 
 
 
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
+<div style="page-break-after: always"></div>
 
 <br>
 <br>
