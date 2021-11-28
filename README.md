@@ -83,7 +83,7 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 
 <br>
 <br>
-Power Consumption
+Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions
 <br>
 <br>
 
