@@ -1,10 +1,13 @@
 # Miami University ECE 448/9 Senior Design Project Report
-## Power Measurement of a Computing System (Fall 2021/Spring 2022) <br> <br> By: Owen Hardy ('22), Sam Rutschilling ('22), Jordan Smith ('22) <br> <br> Dr. Peter Jamieson, Dr. Mark Scott (Advisors)
+## Power Measurement of a Computing System (Fall 2021/Spring 2022)
+### By: Owen Hardy ('22), Sam Rutschilling ('22), Jordan Smith ('22)
+### Advisors: Dr. Peter Jamieson & Dr. Mark Scott
 
 ## Table of Contents
 **[Abstract](#abstract)**<br>
 **[Introduction](#introduction)**<br>
-**[Project Background & Research](#project-background--research)**<br>
+**[Project Background](#project-background)**<br>
+**[Project Research](#project-research)**<br>
 **[Solution Implementation](#solution-implementation)**<br>
 **[Data Findings & Interpretation](#data-findings--interpretation)**<br>
 **[Future Project Goals](#future-project-goals)**<br>
@@ -12,12 +15,12 @@
 
 
 # Abstract
-The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  
+The original goal of this project was to create a power measurement system that could log the power consumption of various perophirals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  After some time had passed in-between semesters, our team and advisors decided to change the scope of the project to develop a hardware solution that could measure the power consumption of various computing tasks.
 
-Before work on the project began, we changed the overall scope of the project to determine the power consumption on a Raspberry Pi for various Python and Objective-C scripts.  These scripts will call several different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost. The ultimate goal of this is to understand how much power consumption certain automatic background tasks use on computers and other devices to determine if the slight added benefit of these operations is truly worth it.
+With this new goal in mind, we developed a list of various computing operations we wanted to measure the power consumption for.  This list included several simple scipts that performed  different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost.  What our team wanted to understand from our data collection was how much power these different operations consume and determine tasks that required signifigcantly more energy than others.
 
 # Introduction
-Every single process running on a computer consumes power, no matter how small it may seem. Even adding a single line of code or an image to a document costs power, or adding a small logo in the footnote of an email can cost extra. While this extra power draw may seem miniscule, it can add up over time and with multiple people connected to the same server, the cost multiplies with each user. So, the question must be asked: are these small processes anything to worry about? Is the extra power bump from running these processes significant and should they be kept to a minimum? (lol, this probably needs altered quite a bit)
+Our team's focus this first semester of the project was to determine the fesabiity of measuring current draw from a computing system as a whole.  Very early on, a decision was made to conduct our experiments on a Raspberry Pi SBC.  We weren't sure if we would be able to observe current changes when running a script, so we thought it best to initially try on a Rasperry Pi since they have very low power consumption for a system running a full OS.  A typical desktop PC may (1) consume several hundred watts at idle and (2) across several different DC voltage rails.  These two factors could make data collection on this sort of system complex, so we stuck with the Raspberry Pi as a proof of concept.  
 
 # Project Background 
 
