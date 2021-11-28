@@ -24,11 +24,33 @@ Every single process running on a computer consumes power, no matter how small i
 # Project Research
 
 # Solution Implementation
-  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement 
+  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA 219 utilizes I2C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
+
+  We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the Power consumption for each computing event event. 
+<br>
+<br>
+
 
 <p align="center">
-  <img height="600" src="./Diagrams/Hardware%20setup.drawio.png">
+  <img height="600" src="./Diagrams/Hardware%20setup%20Fall.png">
 </p>
+
+**Figure 1:** Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The arduino is used for data collection, and the router is used for communicating with the raspberry pi as well as planning for future use.
+
+<br>
+<br>
+  Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption.
+  <br>
+  <br>
+  In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
+  <br>
+  <br>
+
+  <p align="center">
+  <img height="600" src="./Sqlite/PythonFileWriteFinal.png">
+</p>
+
+**Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python.
 
 <!--(not the what, more the data)-->
 # Data Findings & Interpretation
