@@ -3,6 +3,12 @@
 ### By: Owen Hardy ('22), Sam Rutschilling ('22), Jordan Smith ('22)
 ### Advisors: Dr. Peter Jamieson & Dr. Mark Scott
 
+<p align="center">
+  <img width="600" src="./Photos/title.jpeg">
+</p>
+
+<div style="page-break-after: always"></div>
+
 ## Table of Contents
 **[Abstract](#abstract)**<br>
 **[Introduction](#introduction)**<br>
@@ -26,7 +32,7 @@ Our team's focus this first semester of the project was to determine the fesabii
 <div style="page-break-after: always"></div>
 
 # Project Background
-Our team and advisors came up with a small list of scripts for which we wanted to monitor power consumption for.  This script can be seen below.
+Our team and advisors came up with a small list of scripts for which we wanted to monitor power consumption for.  This list can be seen below.
 * Arithmetic (add/subtract, multiply, divide)
 * Sending emails
 * Writing to disk (SD card on RPi)
@@ -37,12 +43,16 @@ Our team and advisors came up with a small list of scripts for which we wanted t
 As mentioned earlier, this semester's focus was a proof of concept.  We knew that eventually we'd want to monitor power consumption for more complex computing events such as the autosuggest feature on the Google search bar.  We wanted to stick with more rudementary operations so we could more easily validate our findings.  Once we had our test parameters set for what sorts of operations we'd be performing on our system, we'd have to move on to research methods of measuring current draw in our specific test environment that we'd defined with our scripts.
 
 # Project Research
+We needed to research the power draw characterisitcs for our system which was a Raspberry Pi 3B+ running Raspbian OS.  The Pi was to be interfaced over the network via SSH so the only connection to the Pi besides the power supply was an ethernet cable.  No external monitors/mice/keyboards we plugged in to the system.  To determine the power draw characeristics with the Pi, we simpy needed to measure the current draw of the system at idle as well as while one of any of the test scripts was running.  This would tell us the current range we should expect to be measuring with our hardware solution.
 
+A Fluke 87V multimeter was set to its current measuring function and connected in series with the 5V lab bench power supply to the Raspberry Pi's power input.  Once the Pi had booted and current fluctuations had stopped, the Fluke measured a current draw of approximately 470mA.  According to the Pi's online user guide, this falls within the expected value.  We ran one of our basic arithmetic scripts and measured a maximum current draw of approximately 700mA.  These findings did suprise us as we weren't expecting such a signifigcant increase in power draw during execution of the script.  This made our job easier since we knew that our current measuring sensor wouldn't have to have as high of granularity as we would have thought.  
+
+Through some reaserch on  various electronics parts distrubutors, we found the Texas Instruments INA219 current monitor IC.  The IC's datahsheet defines a maximum current measurement rating of 3.2A and a maximum voltage of 26V.  This falls well within our test environment characteristics which we saw draw up to 700mA at 5V.  The IC also reports to have a current measuring resolution of 0.8mA which should be plenty of accuracy when we saw our system current spike from ~470mA to ~700mA of. The INA219 operates with a 3 to 5.5V power supply and communicates over I<sup>2</sup>C.  These are all ideal characteristics for our test environment.
 
 <div style="page-break-after: always"></div>
 
 # Solution Implementation
-  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA 219 utilizes I<sup>2</sup>C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
+  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA219 utilizes I<sup>2</sup>C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
 
   We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event event. 
 
