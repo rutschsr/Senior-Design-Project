@@ -1,5 +1,5 @@
-# Miami University ECE 448/9 Senior Design Project Report
-## Power Measurement of a Computing System (Fall 2021/Spring 2022)
+# Miami University ECE 448 Senior Design Project Report
+## Power Measurement of a Computing System (Fall 2021)
 ### By: Owen Hardy ('22), Sam Rutschilling ('22), Jordan Smith ('22)
 ### Advisors: Dr. Peter Jamieson & Dr. Mark Scott
 
@@ -18,6 +18,7 @@
 **[Data Findings & Interpretation](#data-findings--interpretation)**<br>
 **[Future Project Goals](#future-project-goals)**<br>
 **[Conclusion](#conclusion)**<br>
+**[Reflection](#reflection)**<br>
 
 <div style="page-break-after: always"></div>
 
@@ -52,7 +53,7 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 <div style="page-break-after: always"></div>
 
 # Solution Implementation
-  After we determined that using the Texas Instruments INA219 chip would be an appropriate current and power measurement a method to record the data output by it was needed. The INA219 utilizes I<sup>2</sup>C communication so an Arduino Uno was used to communicate between the sensor and a PC used for data collection. On the PC, we created a python script using the Pyserial library to store the data streaming in from the sensor. 
+  With our current measuring IC selected, we had to develop our hardware implementation.  We knew that we would have to have another device that served as our data collection system.  We knew this would have to be isolated from the Raspberry Pi since if we used that to perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  Lucily, the INA219 interfaces over I<sup>2</sup>C and there exists an Arduino library for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor, and print out the data over USB serial to a PC  data where it was logged using a script that utilized the PySerial library.
 
   We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event event. 
 
@@ -125,6 +126,10 @@ After gathering data from the email servers, we will be looking into the Google 
 
 # Conclusion
 
+# Reflection
+* Your understanding of the professional and ethical responsibility as engineers;
+* Your understanding of the need for engaging in life-long learning;
+* Your understanding of the need for a broad education for the purpose of comprehending the impact of your engineering solutions on global/societal issues.
 
 
 
