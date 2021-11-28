@@ -141,6 +141,7 @@ It is important to never stop learning. Learning is one of the most important fa
 
 A broad education is needed for an engineer to be able to design products that can work for a wide range of people or be able to design products for a wide range of people over-designing products for one type of person. What works for a computer engineer might not work for an English major. What works for an American might not work for an Indonesian. We need to be able to create solutions for problems worldwide, and if we don't have the broad education needed to understand nations outside of our own, our solutions won't integrate very well for those other nations, or, perhaps, they could cause problems instead of helping.
 
+<!---
 
 # Our notes (to be ommitted or relocated)
 Be sure to discuss:
