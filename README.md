@@ -80,11 +80,17 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 
 
 
-**Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python.
+**Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
 
 <br>
 <br>
-Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions
+The recording procedure utilized for all of the tests was quite simple. The test raspberry pi was powered on and connected to our test ethernet network router. The raspberry pi is powered through the INA 219 power measurement IC. Next, a SSH (secure shell) connection was made over the network connection to the raspberry pi using Visual Studio Code Remote SSH. Through VSCode, the test scripts were uploaded to the pi and modified. Then for each test, the data collection python script was started on the data collection PC. After several seconds of standby data were collected, the test script for the raspberry pi was started through VSCode. The preformance of both the recording script, and the test script was monitored during the test to make sure there were no unexpected abnormalities. After the test script was done running, several seconds of standby data at the end were collected before stopping the data collection script. Both the SSH connection and the data collection were done using the same laptop. This process was repeated several times for each test operation in order to get a more accurate average of the power consumption.
+<br>
+<br>
+Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions to show their power consumption the results need normalized to each individual operation. This is because some operations take longer than others to complete. While doing trials, we chose arbitrary values of the number of operations so that each trial would be at a minimum, approximately 0.25s long. This required significantly more trials for some of the operations than others.
+<br>
+<br>
+To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in Watts per second. That value is than multiplied by a constant value of 0.000000277778 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
 <br>
 <br>
 
