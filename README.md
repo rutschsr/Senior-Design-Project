@@ -44,18 +44,18 @@ Every single process running on a computer consumes power, no matter how small i
 
 | Operation | Average Increase in Power (w) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kwh) |
 | ----------- | ----------- | ------ | --- |
-| Python LAN Ping & Print | 0.25 | 0.00286 | 5.57432E-13 |
-| Python LAN Ping No Print | 0.19 | 0.001967564 | 2.93624E-13|
-| Python Addition & Print | 0.904 | 3.47814E-05 |
-| Python Subtraction & Print | 0.896  | 2.00675E-06 |
-| Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 |
-| Python Division & Print | 0.189 | 0.000765223 |
-| Python Addition No Print | 0.447 | 1.15415E-06 |
-| Python Subtraction No Print | 0.643 | 1.05705E-06 |
-| Python Multiplication by Constant 2 No Print | 0.195 | 0.00048287 |
-| Python Division No Print | 0.124 | 0.000278534 |
-| Python Write To File | 0.42 | 0.1.1844E-06 |
-| Objective-C Write to File | 0.414 | 7.27639E-08 |
+| Python LAN Ping & Print | 0.25 | 0.00286 | 7.94445E-10 |
+| Python LAN Ping No Print | 0.19 | 0.001967564 | 5.46546E-10|
+| Python Addition & Print | 0.904 | 3.47814E-05 | 9.66151E-12 |
+| Python Subtraction & Print | 0.896  | 2.00675E-06 | 5.57432E-13 |
+| Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 | 1.31249E-10 |
+| Python Division & Print | 0.189 | 0.000765223 | 1.42579E-10 |
+| Python Addition No Print | 0.447 | 1.15415E-06 | 3.20599E-13 |
+| Python Subtraction No Print | 0.643 | 1.05705E-06 | 2.93624E-13 |
+| Python Multiplication by Constant 2 No Print | 0.195 | 0.00048287 | 1.34131E-10 |
+| Python Division No Print | 0.124 | 0.000278534 | 9.02944E-11 |
+| Python Write To File | 0.42 | 0.1.1844E-06 | 3.29E-13 |
+| Objective-C Write to File | 0.414 | 7.27639E-08 | 2.02122E-14 |
 
 # Future Project Goals
 So far, the majority of what we have done is setting up the problem and basic testing to ensure our setup works as we'd expect. In the future, we plan to move onto the next step for the project, that is, the meat of the project. We will be setting up an email server and a script to send emails. Using these, we will be testing the different kinds of content that can be sent via email and how they affect power consumption.
