@@ -106,7 +106,7 @@ Equations for power analysis: Time for each operation = time/trials; Average Pow
 |F| Python Division & Print | 0.189 | 7.652 E-4 | 1.426 E-10 |
 |G| Python Addition No Print | 0.447 | 1.154 E-6 | 3.206 E-13 |
 |H| Python Subtraction No Print | 0.643 | 1.057 E-6 | 2.9364 E-13 |
-|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829E-4 | 1.341 E-10 |
+|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829 E-4 | 1.341 E-10 |
 |J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029 E-11 |
 |K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
 |L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
