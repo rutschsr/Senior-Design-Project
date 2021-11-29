@@ -103,24 +103,24 @@ Equations for power analysis: Time for each operation = time/trials; Average Pow
 
 |ID| Script/Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
 |--| --------- | ----------- | ------ | --- |
-|A| Python LAN Ping & Print | 0.25 | 2.860 E-3 | 7.944E-10 |
-|B| Python LAN Ping No Print | 0.19 | 1.968 E-3 | 5.465E-10|
-|C| Python Addition & Print | 0.904 | 3.478 E-5 | 9.662E-12 |
-|D| Python Subtraction & Print | 0.896  | 2.007 E-6 | 5.574E-13 |
-|E| Python Multiplication by Constant 2 & Print | 0.145 | 4.725E-4 | 1.312E-10 |
-|F| Python Division & Print | 0.189 | 7.652 E-4 | 1.426E-10 |
-|G| Python Addition No Print | 0.447 | 1.154 E-6 | 3.206E-13 |
-|H| Python Subtraction No Print | 0.643 | 1.057 E-6 | 2.9364E-13 |
-|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829E-4 | 1.341E-10 |
-|J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029E-11 |
-|K| Python Write To File | 0.420 | 1.184 E-6 | 3.29E-13 |
-|L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021E-14 |
+|A| Python LAN Ping & Print | 0.25 | 2.860 E-3 | 7.944 E-10 |
+|B| Python LAN Ping No Print | 0.19 | 1.968 E-3 | 5.465 E-10|
+|C| Python Addition & Print | 0.904 | 3.478 E-5 | 9.662 E-12 |
+|D| Python Subtraction & Print | 0.896  | 2.007 E-6 | 5.574 E-13 |
+|E| Python Multiplication by Constant 2 & Print | 0.145 | 4.725E-4 | 1.312 E-10 |
+|F| Python Division & Print | 0.189 | 7.652 E-4 | 1.426 E-10 |
+|G| Python Addition No Print | 0.447 | 1.154 E-6 | 3.206 E-13 |
+|H| Python Subtraction No Print | 0.643 | 1.057 E-6 | 2.9364 E-13 |
+|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829E-4 | 1.341 E-10 |
+|J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029 E-11 |
+|K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
+|L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
 
 Referring to events <b>K</b> and <b>L</b>, we can observe a much smaller power use for the Objective-C file write test at 2.021 E-14 kWh used compared to the Python file write test at 3.29 E-13 kWh used.  These findings make sense since Python scripts are executed in a virtual environment whereas Objective-C does not, so generally Objective-C is considered to be a faster language.
 
 Referring to the non-printing scripts <b>B</b>, <b>G</b>, <b>H</b>, <b>I</b>, <b>J</b> and the printing scripts <b>A</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, we can see that printing to the console uses roughly about 55% more energy (taken as an average across all 5 test variants) than its non-printing equivalent.  Again, this findings makes sense since printing to the console requires more OS calls.  For one, since we're interfacing with the Pi via SSH, the print statement needs to be sent through than channel rather than something like an external display connected via HDMI.
 
-
+The overall significance of this data is that we were able to successfully detect and measure changes in current consumption when various computing tasks were executed.  Our proof-of-concept was a success which will lead us into next semester's objectives where we want to measure energy use for more abstract computing taks (see [Future Project Goals](#future-project-goals)).
 
 <div style="page-break-after: always"></div>
 
