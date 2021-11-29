@@ -85,6 +85,8 @@ The recording procedure utilized for all of the tests was quite simple. The test
 
 Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions to show their power consumption the results need to be normalized to each individual operation. This is because some operations take longer than others to complete. While doing trials, we chose arbitrary values of the number of operations so that each trial would be at a minimum, approximately 0.25s long. This required significantly more trials for some of the operations than others.
 
+<div style="page-break-after: always"></div>
+
 To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in watts per second. That value is then multiplied by a constant value of 2.778 E-6 to output the results in kWh, which is the industry standard value power is billed to consumers in. 
 
 <div style="page-break-after: always"></div>
