@@ -57,7 +57,7 @@ With our current measuring IC selected, we had to develop our hardware implement
 
 We decided to use SQLite to store the data instead of other formats such as .txt (tab-delimited text) or .csv (comma-separated value) for several reasons: SQLite stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLite also allows easy storage of the date/time value as well, which allows us to store the exact time of a data point. SQLite also allows easy searching and calculation of averages of data sets as it allows the use of all common SQL (structured query language) queries and commands. This allowed calculation of the average idle and operation values to be done using just a single query line in the open-source DB Browser for SQLite. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event. 
 
-<br>
+<div style="page-break-after: always"></div>
 
 <p align="center">
   <img width="800" src="./Diagrams/Hardware%20setup%20Fall.png">
@@ -109,6 +109,8 @@ Equations for power analysis: Time for each operation = time/trials; Average Pow
 |K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
 |L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
 
+<div style="page-break-after: always"></div>
+
 In our tests, the least consuming Python operations the add and subtract functions that did not print to the console, tests <b>G</b> and <b>H</b> in the table above which consumed 3.206 E-13 kWh and 2.936 E-13 kWh respectively.  This is in comparison to the highest consuming Python operation we measured, which was the Python ping and print to console trial. This trial, **A** in the table, consumed 7.994 E-10 kWh per computing operation. All of these tests were run with the same Raspberry Pi 3B+ and the same Python 3 interpreter. The large disparity in the power consumption of these operations can largely be attributed to the large difference in resources the two operations will take. The ping and print operation will have OS calls for networking, domain name services, printing to the screen, as well as counting calls. The Python add and subtract operations, only have OS calls for the addition and subtraction operations, which is why their power consumption is so similar and significantly smaller than the other Python operations.
 
 Referring to events <b>K</b> and <b>L</b>, we can observe a much smaller power use for the Objective-C file write test at 2.021 E-14 kWh used compared to the Python file write test at 3.29 E-13 kWh used.  These findings make sense since Python scripts are executed in a virtual environment whereas Objective-C does not, so generally, Objective-C is considered to be a faster language.
@@ -128,6 +130,8 @@ After gathering data from the email servers, we will be looking into the Google 
 In this paper, we have presented an isolated system running on a Raspberry Pi. Using this Raspberry Pi and an INA219 current monitor, we have proved that it is feasible to measure the power draw of a computing system as a whole. However, we have only tested this concept using basic processes, and we plan to test further using more complicated processes. 
 
 The processes we have tried are basic arithmetic, server pinging, and file writing alongside each of these processes accompanied by a print to console and a comparison between Objective-C and Python. Our results have shown that Objective-C consumes less power than Python, making Objective-C a more power-efficient programming language. Arithmetic such as addition and subtraction cost less than arithmetic such as multiplication and division with pinging costing more than addition and subtraction as well. Testing the process with printing to the console increased the power draw even further. So far, our collection of data has shown that there is a difference between when the system is running on idle and when the processes are running, the processes increasing the consumption of the system. This difference is rather small, but the power draw can add up over time if the processes are run continually.
+
+<div style="page-break-after: always"></div>
 
 # Reflection
 It is our responsibility as engineers to ensure that the systems we create are power efficient. Using power costs money and an inefficient program running on an inefficient system implemented into an inefficient machine will compound to cost a lot. It is not right to design systems this way, to intentionally make it so it consumes more power than is reasonable. Our goal, our job, as engineers is to design systems that a customer can rely on and doesn't cause them a net loss overall.
