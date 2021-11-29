@@ -90,7 +90,7 @@ The recording procedure utilized for all of the tests was quite simple. The test
 Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions to show their power consumption the results need normalized to each individual operation. This is because some operations take longer than others to complete. While doing trials, we chose arbitrary values of the number of operations so that each trial would be at a minimum, approximately 0.25s long. This required significantly more trials for some of the operations than others.
 <br>
 <br>
-To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in Watts per second. That value is than multiplied by a constant value of 0.000000277778 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
+To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in watts per second. That value is than multiplied by a constant value of 2.77778 E-6 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
 <br>
 <br>
 
@@ -101,7 +101,7 @@ To calculate the average time each individual computing operation took we simply
 Add charts with data from averages for each of the below
 Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
 
-|ID| Script/Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
+|ID| Script/operation | Average increase in power from idle (W) | Power use / computing event (W/s)| Energy use / computing event (kWh) |
 |--| --------- | ----------- | ------ | --- |
 |A| Python LAN Ping & Print | 0.25 | 2.860 E-3 | 7.944 E-10 |
 |B| Python LAN Ping No Print | 0.19 | 1.968 E-3 | 5.465 E-10|
