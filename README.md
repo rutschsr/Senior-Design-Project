@@ -76,23 +76,25 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
+Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
 
-
-
-**Figure 2:** Shows a visual plot of the data from one of the trials from MATLAB, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
-<div style="page-break-after: always"></div>
+In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
 
 <br>
+
+<p align="center">
+  <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
+</p>
+
+**Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
+
 <br>
-The recording procedure utilized for all of the tests was quite simple. The test Raspberry Pi was powered on and connected to our test ethernet network router. The raspberry pi is powered through the INA219 power measurement IC. Next, a SSH (secure shell) connection was made over the network connection to the raspberry pi using the Visual Studio Code Remote SSH extension. Through VSCode, the test scripts were uploaded to the pi and/or modified. Then for each test, the data collection python script was started on the data collection PC. After several seconds of standby data were collected, the test script for the Raspberry Pi was started through VSCode. The preformance of both the recording script, and the test script was monitored during the test to make sure there were no unexpected abnormalities. After the test script was done running, several seconds of standby data at the end were collected before stopping the data collection script. Both the SSH connection and the data collection were done using the same laptop. This process was repeated several times for each test operation in order to get a more accurate average of the power consumption.
-<br>
-<br>
+
+The recording procedure utilized for all of the tests was quite simple. The test Raspberry Pi was powered on and connected to our test ethernet network router. The raspberry pi is powered through the INA219 power measurement IC. Next, a SSH (secure shell) connection was made over the network connection to the raspberry pi using Visual Studio Code Remote SSH. Through VSCode, the test scripts were uploaded to the pi and modified. Then for each test, the data collection python script was started on the data collection PC. After several seconds of standby data were collected, the test script for the Raspberry Pi was started through VSCode. The preformance of both the recording script, and the test script was monitored during the test to make sure there were no unexpected abnormalities. After the test script was done running, several seconds of standby data at the end were collected before stopping the data collection script. Both the SSH connection and the data collection were done using the same laptop. This process was repeated several times for each test operation in order to get a more accurate average of the power consumption.
+
 Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions to show their power consumption the results need normalized to each individual operation. This is because some operations take longer than others to complete. While doing trials, we chose arbitrary values of the number of operations so that each trial would be at a minimum, approximately 0.25s long. This required significantly more trials for some of the operations than others.
-<br>
-<br>
-To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in Watts per second. That value is than multiplied by a constant value of 0.000000277778 to output the results in kwh, which is the industry standard value power is billed to consumers. 
-<br>
-<br>
+
+To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in watts per second. That value is than multiplied by a constant value of 2.778 E-6 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
 
 <div style="page-break-after: always"></div>
 
@@ -101,20 +103,20 @@ To calculate the average time each individual computing operation took we simply
 Add charts with data from averages for each of the below
 Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
 
-|ID| Script/Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
+|ID| Script/operation | Average increase in power from idle (W) | Power use per computing event (W/s)| Energy use per computing event (kWh) |
 |--| --------- | ----------- | ------ | --- |
-|A| Python LAN Ping & Print | 0.25 | 2.860 E-3 | 7.944E-10 |
-|B| Python LAN Ping No Print | 0.19 | 1.968 E-3 | 5.465E-10|
-|C| Python Addition & Print | 0.904 | 3.478 E-5 | 9.662E-12 |
-|D| Python Subtraction & Print | 0.896  | 2.007 E-6 | 5.574E-13 |
-|E| Python Multiplication by Constant 2 & Print | 0.145 | 4.725E-4 | 1.312E-10 |
-|F| Python Division & Print | 0.189 | 7.652 E-4 | 1.426E-10 |
-|G| Python Addition No Print | 0.447 | 1.154 E-6 | 3.206E-13 |
-|H| Python Subtraction No Print | 0.643 | 1.057 E-6 | 2.9364E-13 |
-|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829E-4 | 1.341E-10 |
-|J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029E-11 |
-|K| Python Write To File | 0.420 | 1.184 E-6 | 3.29E-13 |
-|L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021E-14 |
+|A| Python LAN Ping & Print | 0.25 | 2.860 E-3 | 7.944 E-10 |
+|B| Python LAN Ping No Print | 0.19 | 1.968 E-3 | 5.465 E-10|
+|C| Python Addition & Print | 0.904 | 3.478 E-5 | 9.662 E-12 |
+|D| Python Subtraction & Print | 0.896  | 2.007 E-6 | 5.574 E-13 |
+|E| Python Multiplication by Constant 2 & Print | 0.145 | 4.725E-4 | 1.312 E-10 |
+|F| Python Division & Print | 0.189 | 7.652 E-4 | 1.426 E-10 |
+|G| Python Addition No Print | 0.447 | 1.154 E-6 | 3.206 E-13 |
+|H| Python Subtraction No Print | 0.643 | 1.057 E-6 | 2.9364 E-13 |
+|I| Python Multiplication by Constant 2 No Print | 0.195 | 4.829E-4 | 1.341 E-10 |
+|J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029 E-11 |
+|K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
+|L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
 
 <br>
 <br>
@@ -126,7 +128,7 @@ Referring to events <b>K</b> and <b>L</b>, we can observe a much smaller power u
 
 Referring to the non-printing scripts <b>B</b>, <b>G</b>, <b>H</b>, <b>I</b>, <b>J</b> and the printing scripts <b>A</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, we can see that printing to the console uses roughly about 55% more energy (taken as an average across all 5 test variants) than its non-printing equivalent.  Again, this findings makes sense since printing to the console requires more OS calls.  For one, since we're interfacing with the Pi via SSH, the print statement needs to be sent through than channel rather than something like an external display connected via HDMI.
 
-
+The overall significance of this data is that we were able to successfully detect and measure changes in current consumption when various computing tasks were executed.  Our proof-of-concept was a success which will lead us into next semester's objectives where we want to measure energy use for more abstract computing taks (see [Future Project Goals](#future-project-goals)).
 
 <div style="page-break-after: always"></div>
 
