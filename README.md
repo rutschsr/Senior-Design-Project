@@ -73,6 +73,17 @@ In the recorded data for each of the trials some jumps and increases can be seen
   
 <br>
 
+<p align="center">
+  <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
+</p>
+
+<br>
+
+Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
+
+In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
+
+<br>
 
 <p align="center">
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
@@ -109,7 +120,7 @@ Equations for power analysis: Time for each operation = time/trials; Average Pow
 |J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029 E-11 |
 |K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
 |L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
-<div style="page-break-after: always"></div>
+
 <br>
 <br>
 
