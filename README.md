@@ -108,20 +108,20 @@ To calculate the average time each individual computing operation took we simply
   
   <!-- Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
 
-| Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
-| ----------- | ----------- | ------ | --- |
-| Python LAN Ping & Print | 0.25 | 0.00286 | 7.94445E-10 |
-| Python LAN Ping No Print | 0.19 | 0.001967564 | 5.46546E-10|
-| Python Addition & Print | 0.904 | 3.47814E-05 | 9.66151E-12 |
-| Python Subtraction & Print | 0.896  | 2.00675E-06 | 5.57432E-13 |
-| Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 | 1.31249E-10 |
-| Python Division & Print | 0.189 | 0.000765223 | 1.42579E-10 |
-| Python Addition No Print | 0.447 | 1.15415E-06 | 3.20599E-13 |
-| Python Subtraction No Print | 0.643 | 1.05705E-06 | 2.93624E-13 |
-| Python Multiplication by Constant 2 No Print | 0.195 | 0.00048287 | 1.34131E-10 |
-| Python Division No Print | 0.124 | 0.000278534 | 9.02944E-11 |
-| Python Write To File | 0.42 | 0.1.1844E-06 | 3.29E-13 |
-| Objective-C Write to File | 0.414 | 7.27639E-08 | 2.02122E-14 |
+|ID| Operation | Average Increase in Power (W) | Power Usage / Computing Event (W/s)| Power Usage / Computing Event (kWh) |
+|---| ----------- | ----------- | ------ | --- |
+|A| Python LAN Ping & Print | 0.25 | 0.00286 | 7.94445E-10 |
+|B| Python LAN Ping No Print | 0.19 | 0.001967564 | 5.46546E-10|
+|C| Python Addition & Print | 0.904 | 3.47814E-05 | 9.66151E-12 |
+|D| Python Subtraction & Print | 0.896  | 2.00675E-06 | 5.57432E-13 |
+|E| Python Multiplication by Constant 2 & Print | 0.145 | 0.000472495 | 1.31249E-10 |
+|F| Python Division & Print | 0.189 | 0.000765223 | 1.42579E-10 |
+|G| Python Addition No Print | 0.447 | 1.15415E-06 | 3.20599E-13 |
+|H| Python Subtraction No Print | 0.643 | 1.05705E-06 | 2.93624E-13 |
+|I| Python Multiplication by Constant 2 No Print | 0.195 | 0.00048287 | 1.34131E-10 |
+|J| Python Division No Print | 0.124 | 0.000278534 | 9.02944E-11 |
+|K| Python Write To File | 0.42 | 0.1.1844E-06 | 3.29E-13 |
+|L| Objective-C Write to File | 0.414 | 7.27639E-08 | 2.02122E-14 |
 
 <div style="page-break-after: always"></div>
 
