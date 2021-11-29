@@ -53,9 +53,9 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 <div style="page-break-after: always"></div>
 
 # Solution Implementation
-  With our current measuring IC selected, we had to develop our hardware implementation.  We knew that we would have to have another device that served as our data collection system.  We knew this would have to be isolated from the Raspberry Pi since if we used that to perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  Lucily, the INA219 interfaces over I<sup>2</sup>C and there exists an Arduino library for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor, and print out the data over USB serial to a PC  data where it was logged using a script that utilized the PySerial library.
+With our current measuring IC selected, we had to develop our hardware implementation.  We knew that we would have to have another device that served as our data collection system.  We knew this would have to be isolated from the Raspberry Pi since if we used that to perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  Lucily, the INA219 interfaces over I<sup>2</sup>C and there exists an Arduino library for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor, and print out the data over USB serial to a PC  data where it was logged using a script that utilized the PySerial library.
 
-  We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event event. 
+We decided to use SQLITE to store the data instead of other formats such as .txt (tag delimted text) or .csv (comma seperated value) for several reasons: SQLITE stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLITE also allows easy storage of the date / time value as well, which allows us to store the exact time of a data point. SQLITE also allows easy searching and calculation of averages of data sets as it allows use of all common SQL (structured query language) querys and commands. This allows calculation of the average idle and operation values using just a single query line in the open source DB Browser for SQLITE. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event event. 
 
 <p align="center">
   <img width="800" src="./Diagrams/Hardware%20setup%20Fall.png">
@@ -63,36 +63,23 @@ Through some reaserch on  various electronics parts distrubutors, we found the T
 
 **Figure 1:** Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The Arduino is used for data collection, and the router is used for communicating with the Raspberry Pi as well as planning for future use.
 
-<br>
-<br>
-  Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
-  <br>
-  <br>
-  In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
-  <br>
-  <br>
+Most of the data collected was collected with a timing of 10ms, which means for every second there are 100 data points, which means that there are several thousand data points for most of the trials. This frequency of data collection is high enough to create enough data so that we can be confident our results are a true representation of the systems power consumption, both at idle, and while preforming a computing operation.
 
-  <p align="center">
+In the recorded data for each of the trials some jumps and increases can be seen in the data, especially when viewed visually as below. These are background tasks operating on the OS level and should not cause an issue as they are present in both the average baseline power consumption and the average operation power consumption.
+
+<p align="center">
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
-
-
-
 **Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateued" area in the center is the power consumption during the Python file write test.
+
 <div style="page-break-after: always"></div>
 
-<br>
-<br>
 The recording procedure utilized for all of the tests was quite simple. The test Raspberry Pi was powered on and connected to our test ethernet network router. The raspberry pi is powered through the INA219 power measurement IC. Next, a SSH (secure shell) connection was made over the network connection to the raspberry pi using Visual Studio Code Remote SSH. Through VSCode, the test scripts were uploaded to the pi and modified. Then for each test, the data collection python script was started on the data collection PC. After several seconds of standby data were collected, the test script for the Raspberry Pi was started through VSCode. The preformance of both the recording script, and the test script was monitored during the test to make sure there were no unexpected abnormalities. After the test script was done running, several seconds of standby data at the end were collected before stopping the data collection script. Both the SSH connection and the data collection were done using the same laptop. This process was repeated several times for each test operation in order to get a more accurate average of the power consumption.
-<br>
-<br>
+
 Knowing the increase in power while an operation was functioning is useful, but because the events happen so quickly and we used repeated functions to show their power consumption the results need normalized to each individual operation. This is because some operations take longer than others to complete. While doing trials, we chose arbitrary values of the number of operations so that each trial would be at a minimum, approximately 0.25s long. This required significantly more trials for some of the operations than others.
-<br>
-<br>
-To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in watts per second. That value is than multiplied by a constant value of 2.77778 E-6 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
-<br>
-<br>
+
+To calculate the average time each individual computing operation took we simply took the average time it took for a recorded trial to take place, which is calculated from our SQLITE data and divided it by the arbitrary number of operations we tested during that trial. This calculated value is the average time per individual trial. Multiplying that value by the average increase in wattage between the standby and operation recorded for each trial gives the power consumed by each operation in watts per second. That value is than multiplied by a constant value of 2.778 E-6 to output the results in kwh, which is the industry standard value power is billed to consumers in. 
 
 <div style="page-break-after: always"></div>
 
