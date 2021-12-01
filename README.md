@@ -18,7 +18,7 @@
 **[Data Findings & Interpretation](#data-findings--interpretation)**<br>
 **[Future Project Goals](#future-project-goals)**<br>
 **[Conclusion](#conclusion)**<br>
-**[Reflection](#reflection)**<br>
+**[Ethical](#ethical)**<br>
 
 <div style="page-break-after: always"></div>
 
@@ -134,18 +134,20 @@ So far, the majority of what we have done is setting up the problem and basic te
 After gathering data from the email servers, we will be looking into the Google Search Bar. Or, more specifically, the auto-fill feature of the search bar. The auto-fill feature of the Google Search Bar is a process that gives the user options to fill in what they've already typed. For instance, if the user typed "How to" into the search bar, Google might suggest that the query they're searching for is "how to commit murder", or "how to hide a body", or "how to remove the evidence". Our goal in this instance is to determine how much power having that auto-fill feature on at all times will take up over not having it on at all.
 
 # Conclusion
-In this paper, we have presented an isolated system running on a Raspberry Pi. Using this Raspberry Pi and an INA219 current monitor, we have proved that it is feasible to measure the power draw of a computing system as a whole. However, we have only tested this concept using basic processes, and we plan to test further using more complicated processes. 
+In this report, we have presented an isolated system running on a Raspberry Pi. Using this Raspberry Pi and an INA219 current monitor, we have proved that it is feasible to measure the power draw of a computing system as a whole. However, we have only tested this concept using basic processes, and we plan to test further using more complicated processes. 
+
+We used SQLite to store our data because it is a more stable file format than file formats such as csv or txt. SQLite also provides the ability to directly manipulate the data using SQL queries, so we could easily separate the data into groups of where the operations were running and weren't running using dates, and then find the averages between all the gathered data points. Similarly, the INA219 was used over the Fluke 87V mulitmeter because it fit our needs better. The INA219 has a mugh higher sampling rate than the Fluke, so we were able to get more data in less time, and it has a higher resolution so the data is more accurate.
 
 The processes we have tried are basic arithmetic, server pinging, and file writing alongside each of these processes accompanied by a print to console and a comparison between Objective-C and Python. Our results have shown that Objective-C consumes less power than Python, making Objective-C a more power-efficient programming language. Arithmetic such as addition and subtraction cost less than arithmetic such as multiplication and division with pinging costing more than addition and subtraction as well. Testing the process with printing to the console increased the power draw even further. So far, our collection of data has shown that there is a difference between when the system is running on idle and when the processes are running, the processes increasing the consumption of the system. This difference is rather small, but the power draw can add up over time if the processes are run continually.
 
 <div style="page-break-after: always"></div>
 
-# Reflection
-It is our responsibility as engineers to ensure that the systems we create are power efficient. Using power costs money and an inefficient program running on an inefficient system implemented into an inefficient machine will compound to cost a lot. It is not right to design systems this way, to intentionally make it so it consumes more power than is reasonable. Our goal, our job, as engineers is to design systems that a customer can rely on and doesn't cause them a net loss overall.
+# Ethical
+It is our responsibility as engineers to ensure that the systems we create are power efficient. Using power costs money and an inefficient program running on an inefficient system implemented into an inefficient machine will compound to cost a lot. It is not right to design systems this way, to intentionally make it so it consumes more power than is reasonable. Our goal as engineers is to design systems that a customer can rely on and doesn't cause them a net loss overall. We want to shed some light on what some commonly disregarded features cost.
 
-It is important to never stop learning. Learning is one of the most important facets of life that allows us as the human race to advance society, technology, and, even, our personal beings. If we stop learning, we'll never improve, we'll be stuck as we are, never changing. It is also important to continue to learn to keep our minds sharp and engaged, to prevent them from dulling and losing information.
+It is also our responsibility as engineers to engage in life-long learning. In order to keep up with ever changing technology, we need to constantly be learning about it. There is every possibility that new technology will introduce a very high power process, or feature, that may be able to be turned off, or updated to be more efficient. If we keep ourselves up to date with technology and its nuances, we would be able to identify which process is causing such a high power draw through thorough testing and suggest ways to alter it to cost less.
 
-A broad education is needed for an engineer to be able to design products that can work for a wide range of people or be able to design products for a wide range of people over-designing products for one type of person. What works for a computer engineer might not work for an English major. What works for an American might not work for an Indonesian. We need to be able to create solutions for problems worldwide, and if we don't have the broad education needed to understand nations outside of our own, our solutions won't integrate very well for those other nations, or, perhaps, they could cause problems instead of helping.
+Having a broad education is something an engineer needs to thrive. A broad education is key to understanding the wide range of people who might benefit from knowing how much power the processes they run on their devices cost. We live in a highly connected world and nearly everyone uses technology and consumes power on a near daily basis, so having an understanding of how people use their devices will serve to help them understand how to cut down on power consumption. 
 
 <!---
 
