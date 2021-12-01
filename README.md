@@ -48,22 +48,25 @@ We needed to research the power draw characteristics for our system which was a 
 
 A Fluke 87V multimeter was set to its current measuring function and connected in series with the 5V lab bench power supply to the Raspberry Pi's power input. Once the Pi had booted and current fluctuations had stopped, the Fluke measured a current draw of approximately 470mA. According to the Pi's online user guide, this falls within the expected value. We ran one of our basic arithmetic scripts and measured a maximum current draw of approximately 700mA. These findings did surprise us as we weren't expecting such a significant increase in power draw during the execution of the script. This made our job easier since we knew that our current measuring sensor wouldn't have to have as high of granularity as we would have thought.
 
-Through some research on various electronics parts distributors, we found the Texas Instruments INA219 current monitor IC. The IC's datasheet defines a maximum current measurement rating of 3.2A and a maximum voltage of 26V. This falls well within our test environment characteristics which we saw draw up to 700mA at 5V. The datasheet reports a current measuring resolution of 0.8mA which should be plenty of accuracies when we saw our system current spike from ~470mA to ~700mA of. The INA219 operates with a 3 to 5.5V power supply and communicates over I2C. These are all ideal characteristics for our test environment.
+We found the Texas Instruments INA219 current and power monitoring IC. The IC's datasheet defines a maximum current measurement rating of 3.2A and a maximum voltage of 26V. This falls well within our test environment characteristics which we saw draw up to 700mA at 5V. The datasheet reports a current measuring resolution of 0.8mA which should be plenty of accuracies when we saw our system current spike from ~470mA to ~700mA of. The INA219 operates with a 3 to 5.5V power supply and communicates over I2C. These are all ideal characteristics for our test environment.
 
 <div style="page-break-after: always"></div>
 
 # Solution Implementation
-With our current measuring IC selected, we had to develop our hardware implementation.  We knew that we would have to have another device that served as our data collection system.  We knew this would have to be isolated from the Raspberry Pi since if we used that to perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  The INA219 current and power measurement IC interfaces over I<sup>2</sup>C and a Arduino library is availble from manufacturer Adafruit for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor and print out the data over USB serial to a PC  where it was logged using a script that utilized the PySerial library.
-
-We decided to use SQLite to store the data instead of other formats such as .txt (tab-delimited text) or .csv (comma-separated value) for several reasons: SQLite stores data in columns and tables so it is much less likely to become corrupt if it is incorrectly closed or not closed at all. SQLite also allows easy storage of the date/time value as well, which allows us to store the exact time of a data point. SQLite also allows easy searching and calculation of averages of data sets as it allows the use of all common SQL (structured query language) queries and commands. This allowed calculation of the average idle and operation values to be done using just a single query line in the open-source DB Browser for SQLite. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event. 
-
-<div style="page-break-after: always"></div>
 
 <p align="center">
   <img width="800" src="./Diagrams/Hardware%20setup%20Fall.png">
 </p>
 
-**Figure 1:** Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The Arduino is used for data collection, and the router is used for communicating with the Raspberry Pi as well as planning for future use.
+ **Figure 1:** Diagram of the complete Test Computing system built in lab.
+<!-- Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The Arduino is used for data collection, and the router is used for communicating with the Raspberry Pi as well as planning for future use. -->
+
+With our current measuring IC selected, we had to develop our hardware implementation.  A data collection system seperate from the tested Raspberry Pi was necessary since if we used the Pi perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  The INA219 current and power measurement IC interfaces over I<sup>2</sup>C and an Arduino library is availble from manufacturer Adafruit for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor and print out the data over USB serial to a PC  where it was logged using a script that utilized the PySerial library.
+
+We used SQLite to store the data instead of other formats such as .txt (tab-delimited text) or .csv (comma-separated value). SQLITE is very similar to a SQL server setup commonly used to store data, except it is a single user file, with no server or software. SQLITE is open source and one of the most common data manegement formats used today. SQLite stores data in columns and tables so it is much less likely than other formats to become corrupt if it is incorrectly closed or not closed at all. SQLite also allows easy storage of the date/time value as well, which allows us to store the exact time of a data point. SQLite also allows easy searching and calculation of averages of data sets as it allows the use of all common SQL (structured query language) queries and commands. This allowed calculation of the average idle and operation values to be done using just a single query line in the open-source DB Browser for SQLite. These same queries were also used to calculate the time values for each of these scripts. That data was then used to calculate the power consumption for each computing event. This saved a large amount of time compared to having to create more scripts to calculate these values. Due to the widespread use and open-source nature of SQLITE, there is also a MATLAB function to directly import data from the format, which was used to produce graphs with a short script.
+
+<div style="page-break-after: always"></div>
+
 
 <br>
 
@@ -77,7 +80,7 @@ In the recorded data for each of the trials, some jumps and increases can be see
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
-**Figure 2:** Shows a visual plot of the data from one of the trials, specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the Debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateaued" area in the center is the power consumption during the Python file write test.
+**Figure 2:** Shows a visual plot of the data from one of the trials. <!--specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the Debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateaued" area in the center is the power consumption during the Python file write test.-->
 
 <br>
 
@@ -110,6 +113,8 @@ Equations for power analysis: Time for each operation = time/trials; Average Pow
 |J| Python Division No Print | 0.124 | 2.785 E-4 | 9.029 E-11 |
 |K| Python Write To File | 0.420 | 1.184 E-6 | 3.290 E-13 |
 |L| Objective-C Write to File | 0.414 | 7.276 E-8 | 2.021 E-14 |
+
+**Table 1:** Shows data collected in first-semester tests
 
 <div style="page-break-after: always"></div>
 
