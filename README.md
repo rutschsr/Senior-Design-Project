@@ -2,7 +2,7 @@
 ## Power Measurement of a Computing System (Fall 2021)
 ### By: Sam Rutschilling ('22), Jordan Smith ('22), & Owen Hardy ('22)
 ### Advisors: Dr. Peter Jamieson & Dr. Mark Scott
-
+<br><br><br><br>
 <p align="center">
   <img width="600" src="./Photos/title.jpeg">
 </p>
@@ -10,22 +10,22 @@
 <div style="page-break-after: always"></div>
 
 ## Table of Contents
-**[Abstract](#abstract)**<br>
-**[Introduction](#introduction)**<br>
-**[Project Background](#project-background)**<br>
-**[Project Research](#project-research)**<br>
-**[Solution Implementation](#solution-implementation)**<br>
-**[Data Findings & Interpretation](#data-findings--interpretation)**<br>
-**[Future Project Goals](#future-project-goals)**<br>
-**[Conclusion](#conclusion)**<br>
-**[Ethical](#ethical)**<br>
+**[Abstract - 3](#abstract)**<br>
+**[Introduction - 3](#introduction)**<br>
+**[Project Background - 4](#project-background)**<br>
+**[Project Research - 4](#project-research)**<br>
+**[Solution Implementation - 5](#solution-implementation)**<br>
+**[Data Findings & Interpretation - 9](#data-findings--interpretation)**<br>
+**[Future Project Goals - 11](#future-project-goals)**<br>
+**[Conclusion - 11](#conclusion)**<br>
+**[Ethical - 12](#ethical)**<br>
 
 <div style="page-break-after: always"></div>
 
 # Abstract
-The original goal of this project was to create a power measurement system that could log the power consumption of various peripherals plugged into a power strip.  This would give an idea of how much power each piece of equipment was using at any given time.  After some time had passed in-between semesters, our team and advisors decided to change the scope of the project to develop a hardware solution that could measure the power consumption of various computing tasks.
+After some time had passed in-between semesters, the scope of the project to develop a hardware solution that could measure the power consumption of various computing tasks or a small microprocessor system.
 
-With this new goal in mind, we developed a list of various computing operations we wanted to measure the power consumption for.  This list included several simple scripts that performed different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost.  What our team wanted to understand from our data collection was how much power these different operations consume and determine tasks that required significantly more energy than others.
+With this goal in mind, we began developing a list of various computing operations we wanted to measure the power consumption for.  This list includs several simple scripts that performed different functions including sending email messages, writing to files, accessing webpages, and performing basic arithmetic operations. This allows us to understand the power consumption of small computing tasks and their cost.  What our team wants to understand from our data collection was how much power these different operations consume and determine tasks that required significantly more energy than others.
 
 # Introduction
 Our team's focus this first semester of the project was to determine the feasibility of measuring power draw from a computing system as a whole.  Very early on, a decision was made to conduct our experiments on a Raspberry Pi SBC.  We weren't sure if we would be able to observe power changes when running a script, so we thought it best to initially try on a Raspberry Pi since they have very low power consumption for a system running a full OS.  A typical desktop PC may <b>(1)</b> consume several hundred watts at idle and <b>(2)</b> across several different DC voltage rails.  These two factors could make data collection on this sort of system complex, so we stuck with the Raspberry Pi as a proof of concept.  
