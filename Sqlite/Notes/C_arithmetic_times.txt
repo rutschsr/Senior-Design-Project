@@ -1,0 +1,103 @@
+C Add No Print:
+	Start: 1643754211
+	End: 1643754236
+	Trials: 2147483646
+
+	Start: 1643754295
+	End: 1643754320
+	Trials: 2147483646
+
+	Start: 1643754334
+	End: 1643754359
+	Trials: 2147483646
+
+	Start: 1643754380
+	End: 1643754406
+	Trials: 2147483646
+
+	Start: 1643754419
+	End: 1643754445
+	Trials: 2147483646
+
+C Add Print:
+	Start: 1643755084
+	End: 1643755098
+	Trials:500000
+
+	Start: 1643755128
+	End: 1643755160
+	Trials:500000
+
+	Start: 1643755364
+	End: 1643755407
+	Trials:500000
+
+	Start: 1643755457
+	End: 1643755499
+	Trials:500000
+
+	Start: 1643755513
+	End: 1643755546
+	Trials:500000
+
+C Sub No Print:
+	Start: 1643756037
+	End: 1643756063
+	Trials: 2147483646
+
+	Start: 1643756091
+	End: 1643756116
+	Trials: 2147483646
+
+	Start: 1643756125
+	End: 1643756151
+	Trials: 2147483646
+
+	Start: 1643756160
+	End: 1643756186
+	Trials: 2147483646
+
+	Start: 1643756199
+	End: 1643756224
+	Trials: 2147483646
+
+C Sub Print:
+	Start: 1643755715
+	End: 1643755731
+	Trials: 500000
+
+	Start: 1643755762
+	End: 1643755776
+	Trials: 500000
+
+	Start: 1643755789
+	End: 1643755803
+	Trials: 500000
+
+	Start: 1643755822
+	End: 1643755837
+	Trials: 500000
+
+	Start: 1643755850
+	End: 1643755865
+	Trials: 500000
+
+C Mult No Print:
+	Start: 
+	End: 
+	Trials:
+
+C Mult Print:
+	Start: 
+	End: 
+	Trials:
+
+C Div No Print:
+	Start: 
+	End: 
+	Trials:
+
+C Div Print:
+	Start: 
+	End: 
+	Trials:
