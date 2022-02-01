@@ -3,12 +3,12 @@ import sqlite3 #From sqlite3 package https://anaconda.org/anaconda/sqlite3
 from sqlite3 import Error
 from datetime import datetime
 #System Variables
-arduino_port = "COM7" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
+arduino_port = "COM6" #serial port of Arduino, this probably needs changed, yes (this was linux, we will run on windows)
 baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
 i=1
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\PythonDivideNoPrint.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\C_Subtract_NoPrint.sqlite3')
 cur = con.cursor()
 try: #Add another column here for voltage: , voltage real
     cur.execute('''CREATE TABLE PowerMeasurement
