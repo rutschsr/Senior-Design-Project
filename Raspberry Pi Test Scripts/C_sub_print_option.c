@@ -10,7 +10,7 @@ int main() {
   	printf ( "Current local time and date: %s\n", ctime(&t));
   	time1=t;
 	
-	while (i < 1000) {
+	while (i > 0) {
 		// printf("%d", i);
 		i--;
 	}
