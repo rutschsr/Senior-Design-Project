@@ -19,6 +19,6 @@ int main() {
 	
 	time ( &t );
 	// timeinfo = localtime ( &rawtime );
-  	printf ( "Current local time and date: %s\n", ctime(&time1);
+  	printf ( "Current local time and date: %s\n", ctime(&time1));
   	printf ( "Current local time and date: %s\n", ctime(&t));
 }
