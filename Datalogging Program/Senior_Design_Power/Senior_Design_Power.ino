@@ -32,7 +32,7 @@ void loop(void)
   float power_W=power_mW/1000;
   loadvoltage=voltage_V+(shuntvoltage_mV/1000);
   power_W=(current_mA/1000)*loadvoltage; //(measured voltage)
-  //Serial.print(power_W);
+ // Serial.println(voltage_V);
   
   Serial.println(power_W);
  Serial.print("");
