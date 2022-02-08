@@ -7,7 +7,7 @@ int main() {
 	time_t time1=0;
 
   	time ( &t );
-  	printf ( "Current local time and date: %d\n", ctime(&t));
+  	printf ( "Current local time and date: %s\n", ctime(&t));
   	time1=t;
 	
 	while (i < 2000) {
@@ -18,6 +18,6 @@ int main() {
 	
 	time ( &t );
 	// timeinfo = localtime ( &rawtime );
-  	printf ( "Current local time and date: %d\n", ctime(&time1);
-  	printf ( "Current local time and date: %d\n", ctime(&t));
+  	printf ( "Current local time and date: %s\n", ctime(&time1);
+  	printf ( "Current local time and date: %s\n", ctime(&t));
 }
