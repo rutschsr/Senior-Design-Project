@@ -1,103 +1,167 @@
 C Add No Print:
-	Start: 1643754211
-	End: 1643754236
+	Start: 17:45.25
+	End: 17:45.50
 	Trials: 2147483646
 
-	Start: 1643754295
-	End: 1643754320
+	Start: 17:46.06
+	End: 17:46.31
 	Trials: 2147483646
 
-	Start: 1643754334
-	End: 1643754359
+	Start: 17:47.00
+	End: 17:47.25
 	Trials: 2147483646
 
-	Start: 1643754380
-	End: 1643754406
+	Start: 17:47.32
+	End: 17:47.58
 	Trials: 2147483646
 
-	Start: 1643754419
-	End: 1643754445
+	Start: 17:48.09
+	End: 17:48.34
 	Trials: 2147483646
 
 C Add Print:
-	Start: 1643755084
-	End: 1643755098
+	Start: 17:41.08
+	End: 17:41.23
 	Trials:500000
 
-	Start: 1643755128
-	End: 1643755160
+	Start: 17:41.45
+	End: 17:41.59
 	Trials:500000
 
-	Start: 1643755364
-	End: 1643755407
+	Start: 17:42.17
+	End: 17:42.29
 	Trials:500000
 
-	Start: 1643755457
-	End: 1643755499
+	Start: 17:42.45
+	End: 17:42.57
 	Trials:500000
 
-	Start: 1643755513
-	End: 1643755546
+	Start: 17:43.12
+	End: 17:43.23
 	Trials:500000
 
 C Sub No Print:
-	Start: 1643756037
-	End: 1643756063
+	Start: 17:24.34
+	End: 17:24.59
 	Trials: 2147483646
 
-	Start: 1643756091
-	End: 1643756116
+	Start: 17:25.12
+	End: 17:25.37
 	Trials: 2147483646
 
-	Start: 1643756125
-	End: 1643756151
+	Start: 17:25.51
+	End: 17:26.16
 	Trials: 2147483646
 
-	Start: 1643756160
-	End: 1643756186
+	Start: 17:26.31
+	End: 17:26.56
 	Trials: 2147483646
 
-	Start: 1643756199
-	End: 1643756224
+	Start: 17:27.09
+	End: 17:27.34
 	Trials: 2147483646
 
 C Sub Print:
-	Start: 1643755715
-	End: 1643755731
+	Start: 17:34.58
+	End: 17:35.15
 	Trials: 500000
 
-	Start: 1643755762
-	End: 1643755776
+	Start: 17:35.34
+	End: 17:35.45
 	Trials: 500000
 
-	Start: 1643755789
-	End: 1643755803
+	Start: 17:36.14
+	End: 17:36.24
 	Trials: 500000
 
-	Start: 1643755822
-	End: 1643755837
+	Start: 17:36.40
+	End: 17:36.50
 	Trials: 500000
 
-	Start: 1643755850
-	End: 1643755865
+	Start: 17:37.24
+	End: 17:37.35
 	Trials: 500000
 
 C Mult No Print:
-	Start: 
-	End: 
-	Trials:
+	Start: 18:13.20
+	End: 18:13.39
+	Trials: 500000000
+
+	Start: 18:13.50
+	End: 18:14.08
+	Trials: 500000000
+
+	Start: 18:14.20
+	End: 18:14.39
+	Trials: 500000000
+
+	Start: 18:14.43
+	End: 18:15.02
+	Trials: 500000000
+
+	Start: 18:15.13
+	End: 18:15.31
+	Trials: 500000000
 
 C Mult Print:
-	Start: 
-	End: 
-	Trials:
+	Start: 18:06.52
+	End: 18:07.15
+	Trials: 500000
+
+	Start: 18:07.36
+	End: 18:07.49
+	Trials: 500000
+
+	Start: 18:08.01
+	End: 18:08.15
+	Trials: 500000
+
+	Start: 18:08.30
+	End: 18:08.43
+	Trials: 500000
+
+	Start: 18:08.54
+	End: 18:09.28
+	Trials: 500000
 
 C Div No Print:
 	Start: 
 	End: 
-	Trials:
+	Trials: 50000000
 
-C Div Print:
 	Start: 
 	End: 
-	Trials:
+	Trials: 50000000
+
+	Start: 
+	End: 
+	Trials: 50000000
+
+	Start: 
+	End: 
+	Trials: 50000000
+
+	Start: 
+	End: 
+	Trials: 50000000
+
+C Div Print:
+	Start: 18:19.41
+	End: 18:19.56
+	Trials: 500000
+
+	Start: 18:20.24
+	End: 18:20.37
+	Trials: 500000
+
+	Start: 18:20.52
+	End: 18:21.27
+	Trials: 500000
+
+	Start: 18:21.35
+	End: 18:21.49
+	Trials: 500000
+
+	Start: 18:21.57
+	End: 18:22.11
+	Trials: 500000

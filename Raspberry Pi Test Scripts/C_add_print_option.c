@@ -6,12 +6,12 @@ int main() {
 	long i = 2147483646;
 	printf("Start");
 
-	time_t rawtime;
-	long time1=0;
+	time_t t;
+	time_t time1=0;
 
-  time ( &rawtime );
-  printf ( "Current local time and date: %d\n", rawtime);
-  time1=rawtime;
+  	time ( &t );
+  	printf ( "Current local time and date: %s\n", ctime(&t));
+  	time1=t;
 
 	while (i > 0 ) {
 
@@ -20,8 +20,8 @@ int main() {
 	}
 	printf("End  ");
 	
-time ( &rawtime );
- // timeinfo = localtime ( &rawtime );
-   printf ( "Current local time and date: %d\n", time1);
-  printf ( "Current local time and date: %d\n", rawtime);
+	time ( &t );
+ 	// timeinfo = localtime ( &rawtime );
+  	printf ( "Current local time and date: %s\n", ctime(&time1));
+  	printf ( "Current local time and date: %s\n", ctime(&t));
 }
