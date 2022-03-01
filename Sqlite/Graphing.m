@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='System_Tests/C_Add_NoPrint1.sqlite3'; %Set File name here
+filename='System_Tests/C_Subtract_Print1.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
