@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='System_Tests/C_Subtract_Print1.sqlite3'; %Set File name here
+filename='M_fullbmp_Remote_to_PI.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 

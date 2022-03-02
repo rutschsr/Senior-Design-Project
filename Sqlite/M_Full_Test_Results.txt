@@ -1,0 +1,15 @@
+M_full_png_from_PI
+
+	Ping: 2.8272 No Ping: 2.7757 Diff: 0.0515
+
+M_full_png_Remote_from_PI
+
+	Ping: 3.1026 No Ping: 2.9518 Diff: 0.1508
+
+M_full_png_Remote_to_PI
+
+	Ping: 3.0836 No Ping: 2.9333 Diff: 0.1503
+
+M_fullbmp_Remote_to_PI
+
+	Ping: 3.0442 No Ping: 2.9100 Diff: 0.1342
