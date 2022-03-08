@@ -1,43 +1,43 @@
 Overall, I've noticed that there are too many jumps in wattage while nothing is running, screwing up quite a lot of data
 
-10ms500pingNoPrintOut
-Ping: 2.972	No Ping: 2.782	Diff: 0.19 Time: 
+10ms500RunNoPrintOut
+Run: 2.972	No Run: 2.782	Diff: 0.19 Time: 
 
-10ms500PingPrintout
-Ping: 3.057	No Ping: 2.807	Diff: 0.25 Time:
+10ms500RunPrintout
+Run: 3.057	No Run: 2.807	Diff: 0.25 Time:
 
 CFileWriteTest1
-No Ping: 3.31275 Ping: 3.117095044	Diff: 0.19565496 AvgTime: 37.189921 Trials: 100000000 Time/Trial: 0.000000371899 AvgPwr/Operation: 0.000000072763925056582
+No Run: 3.31275 Run: 3.117095044	Diff: 0.19565496 AvgTime: 37.189921 Trials: 100000000 Time/Trial: 0.000000371899 AvgPwr/Operation: 0.000000072763925056582
 
 CFileWriteTest10ms1
-Ping: 2.845	No Ping: 2.749	Diff: 0.096 ~> It's very difficult to tell where the test is running and where it's not on this graph
+Run: 2.845	No Run: 2.749	Diff: 0.096 ~> It's very difficult to tell where the test is running and where it's not on this graph
 
 PythonAddNoPrint
-Ping: 3.210	No Ping: 2.763	Diff: 0.447
+Run: 3.210	No Run: 2.763	Diff: 0.447
 
 PythonAddPrint
-Ping: 3.562	No Ping: 2.658	Diff: 0.904
+Run: 3.562	No Run: 2.658	Diff: 0.904
 
 PythonDivideNoPrint
-Ping: 2.943	No Ping: 2.819	Diff: 0.124
+Run: 2.943	No Run: 2.819	Diff: 0.124
 
 PythonDividePrint
-Ping: 2.992	No Ping: 2.803	Diff: 0.189
+Run: 2.992	No Run: 2.803	Diff: 0.189
 
 PythonFileWriteTest1
-Ping: 3.250	No Ping: 2.963	Diff: 0.287
+Run: 3.250	No Run: 2.963	Diff: 0.287
 
 PythonFileWriteTest10ms1
-Ping: 2.991	No Ping: 2.571	Diff: 0.42 AvgTime: 2.82 Trials: 1000000 Time/Trial: 0.00000283 AvgPwr/Operation: 0.0000011886
+Run: 2.991	No Run: 2.571	Diff: 0.42 AvgTime: 2.82 Trials: 1000000 Time/Trial: 0.00000283 AvgPwr/Operation: 0.0000011886
 
 PythonMultipleNoPrint
-Ping: 2.931	No Ping: 2.736	Diff: 0.195 AvgTime: 0.8889768 Trials: 1000000 Time/Trial: 0.00000008889768 AvgPwr/Operation: 0.00000017335047
+Run: 2.931	No Run: 2.736	Diff: 0.195 AvgTime: 0.8889768 Trials: 1000000 Time/Trial: 0.00000008889768 AvgPwr/Operation: 0.00000017335047
 
 PythonMultiplyPrint
-Ping: 2.955	No Ping: 2.810	Diff: 0.145 AvgTime: 1.1698325 Trials: 1000000 Time/Trial: 0.0000011698325 AvgPwr/Operation: 0.0000001696257125
+Run: 2.955	No Run: 2.810	Diff: 0.145 AvgTime: 1.1698325 Trials: 1000000 Time/Trial: 0.0000011698325 AvgPwr/Operation: 0.0000001696257125
 
 PythonSubtractNoPrint
-Ping: 3.491	No Ping: 2.848	Diff: 0.643 AvgTime: 1.649393 Trials: 1000000 Time/Trial: 0.000001649393 AvgPwr/Operation: 0.000001060559699
+Run: 3.491	No Run: 2.848	Diff: 0.643 AvgTime: 1.649393 Trials: 1000000 Time/Trial: 0.000001649393 AvgPwr/Operation: 0.000001060559699
 
 PythonSubtractPrint
-Ping: 3.486	No Ping: 2.590	Diff: 0.896 AvgTime: 2.239681 Trials: 1000000 Time/Trial: 0.000002239681 AvgPwr/Operation: 0.000002006754176
+Run: 3.486	No Run: 2.590	Diff: 0.896 AvgTime: 2.239681 Trials: 1000000 Time/Trial: 0.000002239681 AvgPwr/Operation: 0.000002006754176

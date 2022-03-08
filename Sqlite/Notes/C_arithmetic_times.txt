@@ -19,7 +19,7 @@ C Add No Print:
 	End: 17:48.34
 	Trials: 2147483646
 
-Ping: 2.7960 No Ping: 2.7384 Diff: 0.0576
+Run: 2.7960 No Run: 2.7384 Diff: 0.0576
 
 C Add Print:
 	Start: 17:41.08
@@ -42,7 +42,7 @@ C Add Print:
 	End: 17:43.23
 	Trials:500000
 
-Ping: 3.4861 No Ping: 2.9783 Diff: 0.5078
+Run: 3.4861 No Run: 2.9783 Diff: 0.5078
 
 C Sub No Print:
 	Start: 17:24.34
@@ -65,7 +65,7 @@ C Sub No Print:
 	End: 17:27.34
 	Trials: 2147483646
 
-Ping: 2.7945 No Ping: 2.7196 Diff: 0.07196
+Run: 2.7945 No Run: 2.7196 Diff: 0.07196
 
 C Sub Print:
 	Start: 17:34.58
@@ -88,7 +88,7 @@ C Sub Print:
 	End: 17:37.35
 	Trials: 500000
 
-Ping: 3.5682 No Ping: 2.9648 Diff: 0.6034
+Run: 3.5682 No Run: 2.9648 Diff: 0.6034
 
 C Mult No Print:
 	Start: 18:13.20
@@ -111,7 +111,7 @@ C Mult No Print:
 	End: 18:15.31
 	Trials: 500000000
 
-Ping: 2.8383 No Ping: 2.761 Diff: 0.0773
+Run: 2.8383 No Run: 2.761 Diff: 0.0773
 
 C Mult Print:
 	Start: 18:06.52
@@ -134,7 +134,7 @@ C Mult Print:
 	End: 18:09.28
 	Trials: 500000
 
-Ping: 3.5108 No Ping: 3.1277 Diff: 0.3831
+Run: 3.5108 No Run: 3.1277 Diff: 0.3831
 
 C Div No Print:
 	Start: 
@@ -157,7 +157,7 @@ C Div No Print:
 	End: 
 	Trials: 50000000
 
-Ping: No Ping: Diff:
+Run: No Run: Diff:
 
 C Div Print:
 	Start: 18:19.41
@@ -180,4 +180,4 @@ C Div Print:
 	End: 18:22.11
 	Trials: 500000
 
-Ping: 3.5523 No Ping: 3.1279 Diff: 0.4244
+Run: 3.5523 No Run: 3.1279 Diff: 0.4244
