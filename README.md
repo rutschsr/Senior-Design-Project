@@ -1,3 +1,16 @@
+# Experiment write up
+We have the Raspberry Pi and laptop connected on the same LAN network.  We can use a terminal on the laptop to SSH into the Pi to execute our test scripts.  An I2C-enabled current sensor measures the current between the Raspberry Pi and the 5V USB Power Supply.  An Arduino reads the I2C data from the sensor and prints it out via Serial.  A Python script runs on the host laptop that enters the data from the USB Arduino Serial to a SQL database.  
+# Methodology
+# What we are doing
+# How we are doing
+
+
+
+
+<!---
+
+
+
 # Miami University ECE 448 Senior Design Project Report
 ## Power Measurement of a Computing System (Fall 2021)
 ### By: Sam Rutschilling ('22), Jordan Smith ('22), & Owen Hardy ('22)
@@ -59,7 +72,7 @@ We found the Texas Instruments INA219 current and power monitoring IC. The IC's 
 </p>
 
  **Figure 1:** Diagram of the complete Test Computing system built in lab.
-<!-- Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The Arduino is used for data collection, and the router is used for communicating with the Raspberry Pi as well as planning for future use. -->
+Diagram of the complete computing system. The measured system is the Raspberry Pi 3B+ at the center of the layout. The Arduino is used for data collection, and the router is used for communicating with the Raspberry Pi as well as planning for future use.
 
 The hardware implementation for our lab test bench included the afformentioned Texas Instruments current and power measurment IC as seen at the center of *Figure 1.* A data collection system seperate from the tested Raspberry Pi was necessary since if we used the Pi perform the data logging, our power draw would be artificially elevated from this operation running on the Pi at the same time we were running our test script.  The INA219 current and power measurement IC interfaces over I<sup>2</sup>C and an Arduino library is availble from manufacturer Adafruit for interfacing with this sensor.  An Arduino Uno was used to read the data from the sensor and print out the data over USB serial to a PC  where it was logged using a script that utilized the PySerial library. The Design Under Test can be seen at the center of *Figure 1,* The Raspberry Pi 3B+ is the only device on the load side of the INA219 current and power sensor. The power consumption of the Pi was the only value measured by the system. Also important to note with this system, the ethernet network connection of the Raspberry Pi also consumes some power, and this power consumption was not measured in our tests. The connection, and SSH connection did exist in all of our tests, during the idle period, and during the computing events, so its power consumption is included in the idle values. The voltage source in the top left of *Figure 1* powered the INA 219 current and power measurement sensor, as well as thhe Raspberry Pi 3B+ design under test. The ground for the system was connected to the Arduino Uno used for data collection, but since the Arduino had a USB serial connection for data transmission, and due to the behavior of the Arduino, the Arduino was powered by the PC. The ground of the arduino and power measurement IC and the Design Under Test were connected together after we encountered issues accuratley measurin the voltage in the system. The voltage measurements were important as well as the current measurement because the value we are interested in is the Power value. The formula for power is P=V*I, so both current and voltage values are important. 
 
@@ -80,7 +93,7 @@ In the recorded data for each of the trials, some jumps and increases can be see
   <img width="1000" src="./Sqlite/PythonFileWriteFinal.png">
 </p>
 
-**Figure 2:** Shows a visual plot of the data from one of the trials. <!--specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the Debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateaued" area in the center is the power consumption during the Python file write test.-->
+**Figure 2:** Shows a visual plot of the data from one of the trials. <!--specifically a file write test using Python. The jumps in the figure can be attributed to background OS calls in the Debian-based Raspberry Pi OS. The areas of lower consumption at the beginning and end of the figure are the standby power consumption, and the increased "plateaued" area in the center is the power consumption during the Python file write test.
 
 <br>
 
@@ -95,9 +108,9 @@ To calculate the average time each individual computing operation took we simply
 <div style="page-break-after: always"></div>
 
 # Data Findings & Interpretation
-<!--(not the what, more the data)
+(not the what, more the data)
 Add charts with data from averages for each of the below
-Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482)) -->
+Equations for power analysis: Time for each operation = time/trials; Average Power an Operation (Watts)= Trials*Average Wattage; Average Power / Operation in kwh= Average in W/s *0.000000277778; Cost = kwh*cost (Nov 2021 Residential Duke energy cost in Oxford ($0.031482))
 
 |ID| Script/operation | Average increase in power from idle (W) | Power use per computing event (W/s)| Energy use per computing event (kWh) |
 |--| --------- | ----------- | ------ | --- |
@@ -149,7 +162,6 @@ It is also our responsibility as engineers to engage in life-long learning. In o
 
 Having a broad education is something an engineer needs to thrive. A broad education is key to understanding the wide range of people who might benefit from knowing how much power the processes they run on their devices cost. We live in a highly connected world and nearly everyone uses technology and consumes power on a near daily basis, so having an understanding of how people use their devices will serve to help them understand how to cut down on power consumption. 
 
-<!---
 
 # Our notes (to be omitted or relocated)
 Be sure to discuss:
