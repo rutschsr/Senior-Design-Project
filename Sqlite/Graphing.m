@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='M_fullbmp_Remote_to_PI.sqlite3'; %Set File name here
+filename='M_full_half_png_Remote_to_PI.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
