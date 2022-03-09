@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='M_full_bmp_remote_to_local_from_PI.sqlite3'; %Set File name here
+filename='Peter_Jamieson_2015_double_remote_to_local_from_PI.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
