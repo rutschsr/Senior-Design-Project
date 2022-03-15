@@ -5,7 +5,7 @@ close all
 clear all
 
 %% Open SQLITE File
-filename='Redhawk_Logo_half_png_remote_to_local_from_PI.sqlite3'; %Set File name here
+filename='PC_Local_to_PI_Peter_Jamieson_half_bmp.sqlite3'; %Set File name here
 
 conn=sqlite(filename, 'readonly')
 
