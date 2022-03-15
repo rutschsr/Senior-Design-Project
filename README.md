@@ -1,10 +1,21 @@
-# Experiment write up
+# Experiment Write-Up
 We have the Raspberry Pi and laptop connected on the same LAN network.  We can use a terminal on the laptop to SSH into the Pi to execute our test scripts.  An I2C-enabled current sensor measures the current between the Raspberry Pi and the 5V USB Power Supply.  An Arduino reads the I2C data from the sensor and prints it out via Serial.  A Python script runs on the host laptop that enters the data from the USB Arduino Serial to a SQL database.  
 # Methodology
+Various Python scripts have been developed to perform different computing operations on a Raspberry Pi which operates with 5V DC.  There are scripts that test disk access, math operations, printing to console, loops, and images transfer over the network.  When these scripts are executed, the power consumption of the Pi is observed and recorded.  With this data recorded, we are able to determine average power consumption per operation (and by extension monetary energy cost) and extrapolate over long time periods of time.
 # What we are doing
+* Setting up our scp scripts to determine power consumption for different image files with trials using all combinations of the following
+  * 3 images (Miami "M" logo, Red Hawk logo, headshot)
+  * 3 resolutions (50%, 100%, 200% original resolution)
+  * 2 file types (BMP and PNG)
+  * Running Python script on Pi
+    * Sending from Pi to laptop
+    * Sending from laptop to Pi
+  * Running Python script on laptop
+    * Sending from Pi to laptop
+    * Sending from laptop to Pi
+
 # How we are doing
-
-
+We are continuing to collect data for all of our test.  We're trying to make sure to not make errors with our data collection since there is so much data.
 
 
 <!---
