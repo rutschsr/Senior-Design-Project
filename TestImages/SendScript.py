@@ -26,7 +26,8 @@ file_to_compile = 'stop_light_nice'
 
 
 if len(sys.argv) == 2:
-    TrialCmd = 'sshpass -p "" scp M_full.bmp sam@10.10.10.4:'
+
+    TrialCmd = 'sshpass -p "raspberry" scp  pi@10.10.10.3:/home/pi/44mb.rtf .'
 else:
 	TrialCmd = sys.argv[2]
 
