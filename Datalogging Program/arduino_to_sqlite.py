@@ -8,8 +8,7 @@ baud = 115200 #Needs to be the same as the arudino otherwise it will not work
 fileName="current-data.csv" #name of the CSV file generated
 dbName="data.db"
 i=1
-con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\PC_Remote_from_PI_Redhawk_Logo_half_pnga
-.sqlite3')
+con = sqlite3.connect(r'C:\Users\NBSwi\Documents\GitHub\Senior-Design-Project\Sqlite\22mb_onPI_from_PC.sqlite3')
 cur = con.cursor()
 try: #Add another column here for voltage: , voltage real
     cur.execute('''CREATE TABLE PowerMeasurement
