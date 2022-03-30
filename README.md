@@ -1,3 +1,5 @@
+Send email via command line: https://unix.stackexchange.com/questions/223636/sendmail-attachment
+
 # Experiment Write-Up
 We have the Raspberry Pi and laptop connected on the same LAN network.  We can use a terminal on the laptop to SSH into the Pi to execute our test scripts.  An I2C-enabled current sensor measures the current between the Raspberry Pi and the 5V USB Power Supply.  An Arduino reads the I2C data from the sensor and prints it out via Serial.  A Python script runs on the host laptop that enters the data from the USB Arduino Serial to a SQL database.  
 # Methodology
