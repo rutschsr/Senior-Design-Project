@@ -34,6 +34,7 @@ i=0
 TrialCMD1 = 'sshpass -p "rutschsr" scp 44mb.rtf sam@10.10.10.4:'
 TrialCMD2= 'sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/44mb.rtf .'
 TrialCMD3='sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/Redhawk_Logo_double.bmp .'
+TrialCMD4='sshpass -p "rutschsr" scp Redhawk_Logo_double.bmp sam@10.10.10.4:'
 
 while True:
 
@@ -116,7 +117,7 @@ while True:
     
     
     while i<20:
-        run_command(TrialCMD3)
+        run_command(TrialCMD4)
         print(i)
         i=i+1
 
