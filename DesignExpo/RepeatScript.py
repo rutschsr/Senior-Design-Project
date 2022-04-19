@@ -6,6 +6,7 @@ import operator
 import csv
 import logging
 import tempfile
+import time
 
 def run_command(command):
     print('----------------------------------------')
@@ -39,6 +40,9 @@ while True:
         exit_code = os.system("ping -c 1 -w2 srutschilling.net")
         print(exit_code)
         i=i+1
+
+
+    time.sleep(500)
         
     i=0
     while i<20:
