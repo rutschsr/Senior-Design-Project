@@ -32,7 +32,8 @@ i=0
 
 
 TrialCMD1 = 'sshpass -p "rutschsr" scp 44mb.rtf sam@10.10.10.4:'
-TrialCMD2= 'sshpass -p "rutschsr" scp sam@10.10.10.4/44mb.rtf .'
+TrialCMD2= 'sshpass -p "rutschsr" scp sam@10.10.10.4/home/sam/44mb.rtf .'
+TrialCMD3='sshpass -p "rutschsr" scp sam@10.10.10.4/home/sam/Redhawk_Logo_double.bmp .'
 
 while True:
 
@@ -48,12 +49,13 @@ while True:
     while i<500:
         exit_code = os.system("ping -c 1 -w2 srutschilling.net")
         print(exit_code)
+        print(i)
         i=i+1
 
     print
     print
     print
-    print("Test Sending Images To Remote:")
+    print("Test Sending Files To Remote:")
     print
     print
 
@@ -62,28 +64,63 @@ while True:
     i=0
     while i<20:
         run_command(TrialCMD1)
+        print(i)
         i=i+1
     i=0
 
     print
     print
     print
-    print("Test Recieving Images From Remote:")
+    print("Test Recieving Files From Remote:")
     print
     print
     time.sleep(5)
 
 
+
+
     
     while i<20:
         run_command(TrialCMD2)
+        print(i)
         i=i+1
 
     i=0
     
+
+    print
+    print
+    print
+    print("Test Recieving BMP Logo Images from Remote:")
+    print
+    print
+
+    time.sleep(5)
     
     
+    while i<20:
+        run_command(TrialCMD3)
+        print(i)
+        i=i+1
+
+    i=0
+
+    print
+    print
+    print
+    print("Test Sending BMP Logo Images To Remote:")
+    print
+    print
+
+    time.sleep(5)
     
+    
+    while i<20:
+        run_command(TrialCMD3)
+        print(i)
+        i=i+1
+
+    i=0
 
 
 
