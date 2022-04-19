@@ -36,12 +36,12 @@ TrialCMD2= 'sshpass -p "rutschsr" scp sam@10.10.10.4/44mb.rtf .'
 
 while True:
 
-    print()
-    print()
-    print()
+    print
+    print
+    print
     print("Test Pinging Web Address:")
-    print()
-    print()
+    print
+    print
 
     time.sleep(5)
     
@@ -50,12 +50,12 @@ while True:
         print(exit_code)
         i=i+1
 
-    print()
-    print()
-    print()
+    print
+    print
+    print
     print("Test Sending Images To Remote:")
-    print()
-    print()
+    print
+    print
 
     time.sleep(5)
         
@@ -65,12 +65,12 @@ while True:
         i=i+1
     i=0
 
-    print()
-    print()
-    print()
+    print
+    print
+    print
     print("Test Recieving Images From Remote:")
-    print()
-    print()
+    print
+    print
     time.sleep(5)
 
 
