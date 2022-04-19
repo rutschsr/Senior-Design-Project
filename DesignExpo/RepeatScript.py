@@ -32,15 +32,15 @@ file_to_compile = 'stop_light_nice'
 
 i=0
 
-PingCMD="ping srutschilling.net"
+PingCMD="python pingscript.py"
 TrialCMD1 = 'sshpass -p "raspberry" scp 44mb.rtf pi@10.10.10.4:'
 
 while True:
 
-    while i<50:
-        run_command(PingCMD)
-        i=i+1
-    i=0
+    
+    run_command(PingCMD)
+        
+    
     while i<20:
         run_command(TrialCMD1)
         i=i+1
