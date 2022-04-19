@@ -31,7 +31,7 @@ if len(sys.argv) == 2:
 else:
 	TrialCmd = sys.argv[2]
 
-numTrials = int(sys.argv[1])
+#numTrials = int(sys.argv[1])
 
 i=0
 

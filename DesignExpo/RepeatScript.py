@@ -28,7 +28,7 @@ file_to_compile = 'stop_light_nice'
 
 
 
-numTrials = int(sys.argv[1])
+#numTrials = int(sys.argv[1])
 
 i=0
 
