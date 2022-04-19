@@ -32,8 +32,8 @@ i=0
 
 
 TrialCMD1 = 'sshpass -p "rutschsr" scp 44mb.rtf sam@10.10.10.4:'
-TrialCMD2= 'sudo sshpass -p "rutschsr" scp sam@10.10.10.4/home/sam/44mb.rtf .'
-TrialCMD3='sudo sshpass -p "rutschsr" scp sam@10.10.10.4/home/sam/Redhawk_Logo_double.bmp .'
+TrialCMD2= 'sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/44mb.rtf .'
+TrialCMD3='sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/Redhawk_Logo_double.bmp .'
 
 while True:
 
