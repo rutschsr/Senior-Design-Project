@@ -42,7 +42,7 @@ while True:
         i=i+1
 
 
-    time.sleep(500)
+    time.sleep(5)
         
     i=0
     while i<20:
