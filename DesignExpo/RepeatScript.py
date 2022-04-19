@@ -30,7 +30,7 @@ print ("Argument List: %s" % str(sys.argv))
 i=0
 
 
-TrialCMD1 = 'sshpass -p "rutschr" scp 44mb.rtf sam@10.10.10.4:'
+TrialCMD1 = 'sshpass -p "rutschsr" scp 44mb.rtf sam@10.10.10.4:'
 
 while True:
 
