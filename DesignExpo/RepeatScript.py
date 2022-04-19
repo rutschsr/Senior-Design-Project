@@ -20,9 +20,6 @@ def run_command(command):
 print ("Number of arguments: %d" %  len(sys.argv))
 print ("Argument List: %s" % str(sys.argv))
 
-files_to_compile = ['stop_light_nice']
-directories = ['']
-file_to_compile = 'stop_light_nice'
 
 
 
@@ -32,15 +29,18 @@ file_to_compile = 'stop_light_nice'
 
 i=0
 
-PingCMD="python pingscript.py"
+
 TrialCMD1 = 'sshpass -p "raspberry" scp 44mb.rtf pi@10.10.10.4:'
 
 while True:
 
     
-    run_command(PingCMD)
+    while i<50:
+        exit_code = os.system("ping -c 1 -w2 srutschilling.net")
+        print(exit_code)
+        i=i+1
         
-    
+    i=0
     while i<20:
         run_command(TrialCMD1)
         i=i+1
