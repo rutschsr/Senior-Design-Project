@@ -35,6 +35,10 @@ TrialCMD1 = 'sshpass -p "rutschsr" scp 44mb.rtf sam@10.10.10.4:'
 TrialCMD2= 'sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/44mb.rtf .'
 TrialCMD3='sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/Redhawk_Logo_double.bmp .'
 TrialCMD4='sshpass -p "rutschsr" scp Redhawk_Logo_double.bmp sam@10.10.10.4:'
+TrialCMD5='sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/Redhawk_Logo_double.png .'
+TrialCMD6='sshpass -p "rutschsr" scp Redhawk_Logo_double.png sam@10.10.10.4:'
+TrialCMD7='sudo sshpass -p "rutschsr" scp sam@10.10.10.4:/home/sam/Redhawk_Logo_double.png .'
+TrialCMD8='sshpass -p "rutschsr" scp Redhawk_Logo_double.png sam@10.10.10.4:'
 
 while True:
 
@@ -123,6 +127,38 @@ while True:
 
     i=0
 
+    print
+    print
+    print
+    print("Test Recieving PNG Logo Images from Remote:")
+    print
+    print
 
+    time.sleep(5)
+    
+    
+    while i<20:
+        run_command(TrialCMD5)
+        print(i)
+        i=i+1
+
+    i=0
+
+    print
+    print
+    print
+    print("Test Sending PNG Logo Images To Remote:")
+    print
+    print
+
+    time.sleep(5)
+    
+    
+    while i<20:
+        run_command(TrialCMD6)
+        print(i)
+        i=i+1
+
+    i=0
 
 
